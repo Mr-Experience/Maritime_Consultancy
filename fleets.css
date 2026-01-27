@@ -1,0 +1,277 @@
+/* Fleets Page Styles */
+
+/* Reuse global resets and font setup from styles.css */
+.fleets-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding-top: 128px;
+    /* Offset for Fixed Headers */
+}
+
+/* Fleets Hero */
+.fleets-hero {
+    width: 100%;
+    height: 400px;
+    background-color: #6B82AC;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.fleets-hero-content {
+    max-width: 800px;
+    padding: 0 24px;
+    z-index: 2;
+}
+
+.fleets-hero-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.fleets-hero-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Intro and Stats */
+.fleets-intro-section {
+    padding: 80px 24px;
+    background-color: #F3FAFF;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-container {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+}
+
+.centered-desc {
+    margin: 0 auto 48px auto;
+    max-width: 800px;
+    text-align: center;
+    color: #5B5F64;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.fleet-stats-row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.fleet-stat-card {
+    background: #FFFFFF;
+    padding: 32px;
+    border-radius: 20px;
+    min-width: 200px;
+    box-shadow: 0 4px 15px rgba(107, 130, 172, 0.1);
+}
+
+.fs-number {
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #6B82AC;
+    margin-bottom: 8px;
+}
+
+.fs-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1F2937;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Fleet Showcase */
+.fleet-showcase-section {
+    padding: 80px 24px;
+    background-color: #FFFFFF;
+}
+
+.fleet-category-block {
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+}
+
+.category-header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    white-space: nowrap;
+}
+
+.category-line {
+    height: 2px;
+    background-color: #E5E7EB;
+    width: 100%;
+}
+
+.fleet-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+/* Vessel Cards */
+.vessel-card {
+    background-color: #FFFFFF;
+    border-radius: 16px;
+    border: 1px solid #E5E7EB;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.vessel-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.vessel-img-wrapper {
+    width: 100%;
+    height: 240px;
+    position: relative;
+    background-color: #F3FAFF;
+    overflow: hidden;
+}
+
+.vessel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.vessel-card:hover .vessel-img {
+    transform: scale(1.05);
+}
+
+.vessel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(107, 130, 172, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.vessel-card:hover .vessel-overlay {
+    opacity: 1;
+}
+
+.btn-view-spec {
+    background-color: #FFFFFF;
+    color: #6B82AC;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.vessel-card:hover .btn-view-spec {
+    transform: translateY(0);
+}
+
+.vessel-info {
+    padding: 24px;
+}
+
+.vessel-name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.vessel-type {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #6B82AC;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.vessel-specs-list {
+    list-style: none;
+}
+
+.vessel-specs-list li {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #5B5F64;
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.vessel-specs-list li span {
+    font-weight: 600;
+    color: #1F2937;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .fleet-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .fleet-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fleets-hero-title {
+        font-size: 36px;
+    }
+
+    .category-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .category-line {
+        display: none;
+    }
+}

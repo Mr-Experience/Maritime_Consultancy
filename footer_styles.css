@@ -1,0 +1,283 @@
+/* Footer Section Wrapper */
+.footer-section {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    background-color: #FFFFFF;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 0px;
+    box-sizing: border-box;
+}
+
+/* Main Footer Group */
+.footer-main-group {
+    width: calc(100% - 200px);
+    /* 100px margins */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 24px;
+    /* Space between stroke and columns */
+    padding-bottom: 40px;
+    /* Increased to 40px as requested */
+    border-top: 1px solid #E5E7EB;
+    /* The stroke */
+}
+
+.footer-col {
+    flex: 1;
+    /* Equal width for all columns */
+    padding: 0 16px;
+    /* Spacing between content */
+}
+
+.footer-col h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    /* Reduced from 24px */
+    font-weight: 600;
+    /* SemiBold */
+    color: #000000;
+    margin: 0;
+}
+
+/* Newsletter Form Styles */
+.footer-newsletter-form {
+    margin-top: 24px;
+}
+
+.input-group {
+    position: relative;
+    width: 70%;
+    /* Reduced to 70% of available space */
+    /* Full width */
+    height: 44px;
+    background-color: #F3F4F6;
+    /* Subtle gray */
+    border-radius: 12px;
+    /* Reduced to 12px */
+    display: flex;
+    align-items: center;
+    padding: 0 6px;
+    box-sizing: border-box;
+}
+
+.input-group input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    height: 100%;
+    padding-left: 16px;
+    padding-right: 120px;
+    /* Space for text button */
+    border-radius: 12px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    outline: none;
+    color: #000000;
+}
+
+.input-group button {
+    position: absolute;
+    right: 6px;
+    /* Margin from right */
+    top: 6px;
+    bottom: 6px;
+    width: auto;
+    /* Allow width to fit text */
+    height: auto;
+    background-color: #000000;
+    border: none;
+    border-radius: 8px;
+    /* Inner radius */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: #FFFFFF;
+    padding: 0 16px;
+    /* Horizontal padding */
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Middle & Right Column Specifics */
+.footer-col-middle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Center align everything in this column */
+}
+
+.footer-services-list {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 0 0;
+    /* 24px spacing after heading */
+    text-align: center;
+}
+
+.footer-services-list li {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #5B5F64;
+    /* Gray color */
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.footer-services-list li:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+.footer-services-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Secondary Group */
+.footer-secondary-group {
+    width: 100%;
+    height: 60px;
+    background-color: #F2F2F2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* No bottom margin needed as it stacks directly on copyright group in flex column */
+}
+
+.footer-secondary-group span {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 500;
+}
+
+/* Copyright Group */
+.copyright-group {
+    width: 100%;
+    height: 60px;
+    background-color: #222221;
+    /* User requested this color for copyright group */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: none;
+}
+
+.copyright-group span {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #FFFFFF;
+    /* White text on dark background */
+    font-weight: 500;
+}
+
+/* Scroll to Top Button */
+.scroll-top-btn {
+    position: absolute;
+    right: 100px;
+    bottom: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: #FFFFFF;
+    /* White background */
+    border: 1px solid #E5E7EB;
+    /* Circular stroke */
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000000;
+    /* Black content */
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    /* Subtle shadow for depth */
+}
+
+.scroll-top-btn:hover {
+    transform: translateY(-5px);
+    border-color: #000000;
+    /* Darker stroke on hover */
+}
+
+.scroll-top-btn svg {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 2px;
+}
+
+.scroll-top-btn span {
+    font-family: 'Manrope', sans-serif;
+    font-size: 10px;
+    color: #000000;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .footer-main-group {
+        width: calc(100% - 64px);
+        /* Reduced margins */
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-main-group {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 40px;
+        width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+        box-sizing: border-box;
+    }
+
+    .footer-col {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-col h3 {
+        text-align: center;
+    }
+
+    /* Newsletter specific for mobile */
+    .footer-newsletter-form {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .input-group {
+        width: 100%;
+        /* Full width on mobile for easier tapping */
+    }
+
+    .footer-col-middle {
+        align-items: center;
+    }
+
+    /* Scroll to Top mobile position */
+    .scroll-top-btn {
+        right: 24px;
+        bottom: 80px;
+        /* Above secondary group/copyright */
+    }
+}

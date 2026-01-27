@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Romeo Alpha maritime consultancy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer_styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <div class="contact-page" id="top-anchor">
+
+        <!-- Floating Notice Header -->
+        <div class="floating-notice">
+            <div class="notice-content">
+                <span class="notice-text" data-translate="Notice Welcome">Welcome to Romeo Alpha maritime consultancy &
+                    Logistics International
+                    Ltd</span>
+                <div class="close-icon-container">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 3L3 9M3 3L9 9" stroke="#6B82AC" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Site Header -->
+        <header class="main-header">
+            <!-- Left: Logo -->
+            <div class="header-left">
+                <a href="index.html">
+                    <img src="images/logo-alpha.jpg" alt="Company Logo" class="logo">
+                </a>
+            </div>
+
+            <!-- Center: Navigation (Desktop) -->
+            <nav class="header-center desktop-nav">
+                <a href="about.html" class="nav-link" data-translate="About us">About us</a>
+                <a href="fleets.html" class="nav-link" data-translate="Our fleets">Our fleets</a>
+                <a href="team.html" class="nav-link" data-translate="Our team">Our team</a>
+                <a href="careers.html" class="nav-link" data-translate="Careers">Careers</a>
+                <a href="contact.html" class="nav-link active" data-translate="Contact us">Contact us</a>
+            </nav>
+
+            <!-- Right: CTA & Lang -->
+            <div class="header-right">
+                <div class="language-selector" id="language-selector">
+                    <div class="language-trigger">
+                        <!-- Globe Icon -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 12H22" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="language-text" id="current-lang-text">EN</span>
+                    </div>
+                    <!-- Dropdown -->
+                    <div class="language-dropdown">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="es">Español</div>
+                        <div class="lang-option" data-lang="fr">Français</div>
+                        <div class="lang-option" data-lang="de">Deutsch</div>
+                        <div class="lang-option" data-lang="zh">中文 (Chinese)</div>
+                    </div>
+                </div>
+                <button class="btn-get-quotes desktop-cta" data-translate="Get Quotes">Get quotes</button>
+            </div>
+
+            <!-- Mobile Menu Toggle -->
+            <div class="mobile-menu-toggle">
+                <!-- Hamburger Icon -->
+                <svg class="icon-hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21M3 6H21M3 18H21" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <!-- Close Icon (Hidden by default) -->
+                <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </header>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="mobile-menu-dropdown">
+            <nav class="mobile-nav">
+                <a href="about.html" class="nav-link">About us</a>
+                <a href="fleets.html" class="nav-link">Our fleets</a>
+                <a href="team.html" class="nav-link">Our team</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link active">Contact us</a>
+            </nav>
+            <div class="mobile-cta">
+                <button class="btn-get-quotes">Get quotes</button>
+            </div>
+        </div>
+
+        <!-- Contact Hero Section -->
+        <section class="contact-hero">
+            <div class="contact-hero-content">
+                <h1 class="contact-hero-title" data-translate="Contact Hero Title">Get in Touch</h1>
+                <p class="contact-hero-subtitle" data-translate="Contact Hero Subtitle">We are here to help you with
+                    your maritime and offshore needs.</p>
+            </div>
+        </section>
+
+        <!-- Contact Content Section -->
+        <section class="contact-content-section">
+
+            <!-- Info Strip -->
+            <div class="contact-info-strip">
+                <!-- Item 1: Visit Office -->
+                <div class="contact-strip-item dark">
+                    <div class="strip-icon-circle">
+                        <!-- Map Pin Icon -->
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#FFF"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="strip-text">
+                        <h3 data-translate="Visit Office Heading">Visit Our Office</h3>
+                        <p>Portharcourt, Nigeria.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Let's Talk -->
+                <div class="contact-strip-item primary">
+                    <div class="strip-icon-circle">
+                        <!-- Phone Icon -->
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#FFF"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.05 12.05 0 0 0 .57 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.03 12.03 0 0 0 2.81.57A2 2 0 0 1 22 16.92z">
+                            </path>
+                        </svg>
+                    </div>
+                    <div class="strip-text">
+                        <h3 data-translate="Lets Talk Heading">Let's Talk</h3>
+                        <p>+234 814 409 1443</p>
+                        <span class="cta-text" data-translate="Call Us CTA">Call Us</span>
+                    </div>
+                </div>
+
+                <!-- Item 3: Inbox -->
+                <div class="contact-strip-item dark">
+                    <div class="strip-icon-circle">
+                        <!-- Envelope Icon -->
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#FFF"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <div class="strip-text">
+                        <h3 data-translate="Inbox Heading">Inbox</h3>
+                        <p>info@Alpharomeo.com</p>
+                        <span class="cta-text" data-translate="Email Us CTA">Send E-mail</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contact-container">
+
+                <!-- Left Panel: Support Person -->
+                <div class="support-side-panel">
+                    <div class="support-image-wrapper">
+                        <img src="images/support_rep_custom.jpg" alt="Customer Support Representative">
+                    </div>
+                    <h3 data-translate="Support Text">Get in touch and let us know how we can help.</h3>
+                    <a href="about.html" class="btn-about-company" data-translate="About Btn">About Company</a>
+                </div>
+
+                <!-- Right Panel: Contact Form -->
+                <div class="contact-form-container">
+                    <h2 data-translate="Form Title">Send us a message</h2>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name" data-translate="Form Name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" data-translate="Form Email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" data-translate="Form Subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Inquiry about..." required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" data-translate="Form Message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Your message here..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn-submit" data-translate="Form Submit">Send Message</button>
+                    </form>
+                </div>
+
+            </div>
+
+            <!-- U-Shape Divider -->
+            <div class="custom-shape-divider-contact">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path d="M0,0 C300,130 900,130 1200,0 V120 H0 Z" class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="footer-main-group" style="border-top: none;">
+                <div class="footer-col">
+                    <h3 data-translate="Footer Subscribe Heading">Subscribe to our newsletter</h3>
+                    <form class="footer-newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Email" required>
+                            <button type="submit" data-translate="Footer Subscribe Btn">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="footer-col footer-col-middle">
+                    <h3 data-translate="Footer Business Heading">Doing Business Together</h3>
+                    <ul class="footer-services-list">
+                        <li data-translate="Footer Link What">What we do</li>
+                        <li data-translate="Footer Link Fleets">Our fleets</li>
+                        <li data-translate="Footer Link Offshore">Offshore services</li>
+                        <li data-translate="Footer Link Security">Marine security</li>
+                        <li data-translate="Footer Link Charter">Vessel charter & management</li>
+                        <li data-translate="Footer Link Partnership">Partnerships</li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col-middle">
+                    <h3 data-translate="Footer Know Heading">Get to know Us</h3>
+                    <ul class="footer-services-list">
+                        <li data-translate="Footer Link About">About Alpha Romeo</li>
+                        <li data-translate="Footer Link News">News & Insights</li>
+                        <li data-translate="Footer Link Careers">Careers</li>
+                        <li data-translate="Footer Link Contact">Contact us</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Scroll to Top Button -->
+            <a href="#top-anchor" class="scroll-top-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19V5M5 12l7-7 7 7" />
+                </svg>
+                <span data-translate="Scroll Top">Top</span>
+            </a>
+
+            <div class="footer-secondary-group">
+                <span>Headquater - 234 8144091443 - info@Alpharomeo.com - Portharcourt, Nigeria.</span>
+            </div>
+            <div class="copyright-group">
+                <span>&copy; 2026 Romeo Alpha Maritime Consultancy & Logistics International Ltd</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Floating Notice
+        const noticeHeader = document.querySelector('.floating-notice');
+        const noticeCloseBtn = document.querySelector('.floating-notice .close-icon-container');
+        const mainHeader = document.querySelector('.main-header');
+        const contactPage = document.querySelector('.contact-page');
+        const mobileMenu = document.querySelector('.mobile-menu-dropdown');
+
+        if (noticeCloseBtn) {
+            noticeCloseBtn.addEventListener('click', () => {
+                noticeHeader.style.display = 'none';
+                mainHeader.style.top = '0';
+                contactPage.style.paddingTop = '80px';
+                if (mobileMenu) mobileMenu.style.top = '80px';
+            });
+        }
+
+        // Mobile Menu
+        const toggleBtn = document.querySelector('.mobile-menu-toggle');
+        const hamburgerIcon = document.querySelector('.icon-hamburger');
+        const closeIcon = document.querySelector('.icon-close');
+
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.toggle('open');
+                if (mainHeader.style.top === '0px') {
+                    mobileMenu.style.top = '80px';
+                } else {
+                    mobileMenu.style.top = '128px';
+                }
+
+                if (isOpen) {
+                    hamburgerIcon.style.display = 'none';
+                    closeIcon.style.display = 'block';
+                } else {
+                    hamburgerIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                }
+            });
+        }
+
+        // Language Selector
+        const langSelector = document.getElementById('language-selector');
+        const currentLangText = document.getElementById('current-lang-text');
+        const langOptions = document.querySelectorAll('.lang-option');
+        let currentLang = 'en';
+
+        const translations = {
+            'en': {
+                'Notice Welcome': 'Welcome to Romeo Alpha maritime consultancy & Logistics International Ltd',
+                'About us': 'About us',
+                'Our fleets': 'Our fleets',
+                'Our team': 'Our team',
+                'Careers': 'Careers',
+                'Contact us': 'Contact us',
+                'Get Quotes': 'Get quotes',
+                'Footer Subscribe Heading': 'Subscribe to our newsletter',
+                'Footer Subscribe Btn': 'Subscribe',
+                'Footer Business Heading': 'Doing Business Together',
+                'Footer Link What': 'What we do',
+                'Footer Link Fleets': 'Our fleets',
+                'Footer Link Offshore': 'Offshore services',
+                'Footer Link Security': 'Marine security',
+                'Footer Link Charter': 'Vessel charter & management',
+                'Footer Link Partnership': 'Partnerships',
+                'Footer Know Heading': 'Get to know Us',
+                'Footer Link About': 'About Alpha Romeo',
+                'Footer Link News': 'News & Insights',
+                'Footer Link Careers': 'Careers',
+                'Footer Link Contact': 'Contact us',
+                'Scroll Top': 'Top',
+                'Contact Hero Title': 'Get in Touch',
+                'Contact Hero Subtitle': 'We are here to help you with your maritime and offshore needs.',
+                'Visit Office Heading': 'Visit Our Office',
+                'Lets Talk Heading': 'Let\'s Talk',
+                'Call Us CTA': 'Call Us',
+                'Inbox Heading': 'Inbox',
+                'Email Us CTA': 'Send E-mail',
+                'Support Text': 'Get in touch and let us know how we can help.',
+                'About Btn': 'About Company',
+                'Form Title': 'Send us a message',
+                'Form Name': 'Full Name',
+                'Form Email': 'Email Address',
+                'Form Subject': 'Subject',
+                'Form Message': 'Message',
+                'Form Submit': 'Send Message'
+            },
+            'es': {
+                'Notice Welcome': 'Bienvenido a Romeo Alpha',
+                'About us': 'Sobre nosotros',
+                'Our fleets': 'Nuestras flotas',
+                'Our team': 'Nuestro equipo',
+                'Careers': 'Carreras',
+                'Contact us': 'Contáctenos',
+                'Get Quotes': 'Obtener cotización',
+                'Footer Subscribe Heading': 'Suscríbete a nuestro boletín',
+                'Footer Subscribe Btn': 'Suscribirse',
+                'Footer Business Heading': 'Haciendo Negocios Juntos',
+                'Footer Link What': 'Lo que hacemos',
+                'Footer Link Fleets': 'Nuestras flotas',
+                'Footer Link Offshore': 'Servicios offshore',
+                'Footer Link Security': 'Seguridad marina',
+                'Footer Link Charter': 'Alquiler y gestión de buques',
+                'Footer Link Partnership': 'Asociaciones',
+                'Footer Know Heading': 'Conócenos',
+                'Footer Link About': 'Sobre Alpha Romeo',
+                'Footer Link News': 'Noticias y Perspectivas',
+                'Footer Link Careers': 'Carreras',
+                'Footer Link Contact': 'Contáctenos',
+                'Scroll Top': 'Cima',
+                'Contact Hero Title': 'Ponte en contacto',
+                'Contact Hero Subtitle': 'Estamos aquí para ayudarte con tus necesidades marítimas.',
+                'Visit Office Heading': 'Visita Nuestra Oficina',
+                'Lets Talk Heading': 'Hablemos',
+                'Call Us CTA': 'Llámanos',
+                'Inbox Heading': 'Bandeja de Entrada',
+                'Email Us CTA': 'Enviar E-mail',
+                'Support Text': 'Ponte en contacto y déjanos saber cómo podemos ayudar.',
+                'About Btn': 'Sobre la Empresa',
+                'Form Title': 'Envíanos un mensaje',
+                'Form Name': 'Nombre completo',
+                'Form Email': 'Correo electrónico',
+                'Form Subject': 'Asunto',
+                'Form Message': 'Mensaje',
+                'Form Submit': 'Enviar mensaje'
+            },
+            'fr': {
+                'Notice Welcome': 'Bienvenue chez Romeo Alpha',
+                'About us': 'À propos de nous',
+                'Our fleets': 'Nos flottes',
+                'Our team': 'Notre équipe',
+                'Careers': 'Carrières',
+                'Contact us': 'Contactez-nous',
+                'Get Quotes': 'Obtenir des devis',
+                'Footer Subscribe Heading': 'Abonnez-vous à notre newsletter',
+                'Footer Subscribe Btn': 'S\'abonner',
+                'Footer Business Heading': 'Faire des Affaires Ensemble',
+                'Footer Link What': 'Ce que nous faisons',
+                'Footer Link Fleets': 'Nos flottes',
+                'Footer Link Offshore': 'Services offshore',
+                'Footer Link Security': 'Sécurité maritime',
+                'Footer Link Charter': 'Affrètement et gestion de navires',
+                'Footer Link Partnership': 'Partenariats',
+                'Footer Know Heading': 'Apprenez à nous connaître',
+                'Footer Link About': 'À propos d\'Alpha Romeo',
+                'Footer Link News': 'Nouvelles et Perspectives',
+                'Footer Link Careers': 'Carrières',
+                'Footer Link Contact': 'Contactez-nous',
+                'Scroll Top': 'Haut',
+                'Contact Hero Title': 'Contactez-nous',
+                'Contact Hero Subtitle': 'Nous sommes là pour vous aider avec vos besoins maritimes.',
+                'Visit Office Heading': 'Visitez Notre Bureau',
+                'Lets Talk Heading': 'Parlons',
+                'Call Us CTA': 'Appelez-nous',
+                'Inbox Heading': 'Boîte de Réception',
+                'Email Us CTA': 'Envoyer un E-mail',
+                'Support Text': 'Contactez-nous et laissez-nous savoir comment nous pouvons vous aider.',
+                'About Btn': 'À Propos de l\'Entreprise',
+                'Form Title': 'Envoyez-nous un message',
+                'Form Name': 'Nom complet',
+                'Form Email': 'Adresse E-mail',
+                'Form Subject': 'Sujet',
+                'Form Message': 'Message',
+                'Form Submit': 'Envoyer le message'
+            },
+            'de': {
+                'Notice Welcome': 'Willkommen bei Romeo Alpha',
+                'About us': 'Über uns',
+                'Our fleets': 'Unsere Flotten',
+                'Our team': 'Unser Team',
+                'Careers': 'Karriere',
+                'Contact us': 'Kontaktieren Sie uns',
+                'Get Quotes': 'Angebote anfordern',
+                'Footer Subscribe Heading': 'Abonnieren Sie unseren Newsletter',
+                'Footer Subscribe Btn': 'Abonnieren',
+                'Footer Business Heading': 'Geschäfte zusammen machen',
+                'Footer Link What': 'Was wir tun',
+                'Footer Link Fleets': 'Unsere Flotten',
+                'Footer Link Offshore': 'Offshore-Dienste',
+                'Footer Link Security': 'Marinesicherheit',
+                'Footer Link Charter': 'Schiffscharter & Management',
+                'Footer Link Partnership': 'Partnerschaften',
+                'Footer Know Heading': 'Lernen Sie uns kennen',
+                'Footer Link About': 'Über Alpha Romeo',
+                'Footer Link News': 'Nachrichten & Einblicke',
+                'Footer Link Careers': 'Karriere',
+                'Footer Link Contact': 'Kontaktieren Sie uns',
+                'Scroll Top': 'Oben',
+                'Contact Hero Title': 'Nehmen Sie Kontakt auf',
+                'Contact Hero Subtitle': 'Wir sind hier, um Ihnen bei Ihren maritimen Bedürfnissen zu helfen.',
+                'Visit Office Heading': 'Besuchen Sie unser Büro',
+                'Lets Talk Heading': 'Lass uns reden',
+                'Call Us CTA': 'Rufen Sie uns an',
+                'Inbox Heading': 'Posteingang',
+                'Email Us CTA': 'E-Mail senden',
+                'Support Text': 'Nehmen Sie Kontakt auf und lassen Sie uns wissen, wie wir helfen können.',
+                'About Btn': 'Über das Unternehmen',
+                'Form Title': 'Senden Sie uns eine Nachricht',
+                'Form Name': 'Vollständiger Name',
+                'Form Email': 'E-Mail-Adresse',
+                'Form Subject': 'Betreff',
+                'Form Message': 'Nachricht',
+                'Form Submit': 'Nachricht senden'
+            },
+            'zh': {
+                'Notice Welcome': '欢迎来到 Romeo Alpha',
+                'About us': '关于我们',
+                'Our fleets': '我们的船队',
+                'Our team': '我们的团队',
+                'Careers': '职业生涯',
+                'Contact us': '联系我们',
+                'Get Quotes': '获取报价',
+                'Footer Subscribe Heading': '订阅我们的通讯',
+                'Footer Subscribe Btn': '订阅',
+                'Footer Business Heading': '共同开展业务',
+                'Footer Link What': '我们做什么',
+                'Footer Link Fleets': '我们的船队',
+                'Footer Link Offshore': '离岸服务',
+                'Footer Link Security': '海事安全',
+                'Footer Link Charter': '船只租赁与管理',
+                'Footer Link Partnership': '合作伙伴',
+                'Footer Know Heading': '了解我们',
+                'Footer Link About': '关于 Alpha Romeo',
+                'Footer Link News': '新闻与见解',
+                'Footer Link Careers': '职业生涯',
+                'Footer Link Contact': '联系我们',
+                'Scroll Top': '顶部',
+                'Contact Hero Title': '取得联系',
+                'Contact Hero Subtitle': '我们要在这里帮助您的海事和离岸需求。',
+                'Visit Office Heading': '参观我们的办公室',
+                'Lets Talk Heading': '让我们谈谈',
+                'Call Us CTA': '致电我们',
+                'Inbox Heading': '收件箱',
+                'Email Us CTA': '发送电子邮件',
+                'Support Text': '取得联系，让我们知道我们可以如何提供帮助。',
+                'About Btn': '关于公司',
+                'Form Title': '向我们发送消息',
+                'Form Name': '全名',
+                'Form Email': '电子邮件地址',
+                'Form Subject': '主题',
+                'Form Message': '消息',
+                'Form Submit': '发送消息'
+            }
+        };
+
+        // Function to apply translations
+        function applyTranslations(lang) {
+            const langLabel = lang === 'zh' ? 'ZH' : lang.toUpperCase();
+            if (currentLangText) currentLangText.innerText = langLabel;
+
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    el.innerHTML = translations[lang][key];
+                }
+            });
+        }
+
+        // Initialize Language
+        function initLanguage() {
+            const savedLang = localStorage.getItem('romeoAlphaLang');
+            if (savedLang && translations[savedLang]) {
+                currentLang = savedLang;
+            } else {
+                // Detect device language
+                const browserLang = navigator.language || navigator.userLanguage;
+                const shortLang = browserLang.split('-')[0];
+                if (translations[shortLang]) {
+                    currentLang = shortLang;
+                } else {
+                    currentLang = 'en'; // Default
+                }
+            }
+            applyTranslations(currentLang);
+        }
+
+        if (langSelector) {
+            // Run initialization
+            initLanguage();
+
+            langSelector.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langSelector.classList.toggle('active');
+            });
+
+            document.addEventListener('click', () => {
+                langSelector.classList.remove('active');
+            });
+
+            langOptions.forEach(option => {
+                option.addEventListener('click', () => {
+                    const langCode = option.getAttribute('data-lang');
+                    currentLang = langCode;
+                    localStorage.setItem('romeoAlphaLang', langCode); // Save preference
+                    applyTranslations(currentLang);
+                });
+            });
+        }
+
+        // Preloader Logic
+        window.addEventListener('load', () => {
+            const preloader = document.querySelector('.preloader');
+            if (preloader) {
+                setTimeout(() => {
+                    preloader.classList.add('hidden');
+                }, 500); // Small delay for smoothness
+            }
+        });
+    </script>
+</body>
+
+</html>

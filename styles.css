@@ -1,0 +1,1749 @@
+/* Global Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #FFFFFF;
+    min-height: 100vh;
+}
+
+.page-wrapper {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Preloader Styles */
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #F3FAFF;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+}
+
+.preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #E5E7EB;
+    border-top: 4px solid #6B82AC;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Fixed Layout Container */
+/* Fixed Layout Container */
+.landing-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding-top: 128px;
+    /* Offset for Fixed Headers (48px + 80px) */
+}
+
+
+
+/* Floating Notice Header */
+/* Floating Notice Header */
+.floating-notice {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: none;
+    width: 100%;
+    background-color: #6B82AC;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    /* Strict fixed height */
+    padding: 0;
+    /* Remove vertical padding to maintain exact 48px */
+    box-sizing: border-box;
+}
+
+
+
+
+/* Ensure sticky/fixed behavior mimics being "inside" the 1440px layout visual */
+@media (max-width: 1440px) {
+    .floating-notice {
+        width: 100%;
+        left: 0;
+        transform: none;
+    }
+}
+
+.notice-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 100%;
+    gap: 400px;
+    /* Precise 400px spacing between items */
+    position: relative;
+    margin: 0 auto;
+}
+
+
+
+
+.notice-text {
+    position: static;
+    transform: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 500;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+
+
+
+
+.close-icon-container {
+    width: 24px;
+    height: 24px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: static;
+    right: auto;
+}
+
+
+/* Update text positioning logic to match "approx 400px spacing" if strictly enforced,
+   but "CenterLLY ALIGNED" for text implies text is centered in the bar.
+   The close icon is at the right edge.
+   The 400px spacing might be a result of 1440px width - text length.
+   I will respect "Text: Center aligned" and "Icon: Right aligned". 
+*/
+
+
+/* Main Site Header */
+.main-header {
+    width: 100%;
+    height: 80px;
+    background-color: #F3FAFF;
+    padding: 0 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    /* It should sit below the floating header. 
+       Floating header is fixed. So Main Header is at top of flow (under body/landing-page).
+       But visual start depends on floating header height? 
+       Request: "Main site header below it... It should sit naturally in the document flow below the floating notice header".
+       Since floating is FIXED, it removes from flow. 
+       I need to add margin-top to main-header to compensate for the floating header's height + top offset.
+       Let's estimate floating header height: ~48-50px (vertical padding + line height). + 16px top offset.
+       Total ~64px spacing needed. 
+       Wait, "Page content follows".
+       I will add a spacer or margin.
+    */
+    margin-top: 0;
+    /* Remove spacer */
+    position: fixed;
+    /* Fixed below notice */
+    top: 48px;
+    /* Height of Notice (12+12 padding + 24 line-height) */
+    left: 0;
+    z-index: 900;
+}
+
+.logo {
+    height: 48px;
+    /* Arbitrary logical size to fit in 80px header, let's say max-height 100% or contained */
+    max-height: 100%;
+    width: auto;
+    mix-blend-mode: multiply;
+}
+
+.header-center {
+    display: flex;
+    gap: 32px;
+    /* Even spacing */
+}
+
+.nav-link {
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: #000000;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+    opacity: 0.9;
+    letter-spacing: 1px;
+}
+
+.nav-link:hover {
+    color: #6B82AC;
+    font-weight: 700;
+}
+
+.nav-link.active {
+    color: #6B82AC;
+    font-weight: 600;
+}
+
+.btn-get-quotes {
+    background-color: #6B82AC;
+    /* Presumed from brand color */
+    color: #FFFFFF;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.btn-get-quotes:hover {
+    background-color: #5A6E91;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    /* Space between language selector and button */
+}
+
+.language-selector {
+    position: relative;
+    cursor: pointer;
+}
+
+.language-trigger {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.language-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.language-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #FFFFFF;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 8px;
+    width: 120px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.language-selector.active .language-dropdown {
+    display: flex;
+}
+
+.lang-option {
+    padding: 8px 16px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #1F2937;
+    transition: background 0.2s;
+}
+
+.lang-option:hover {
+    background-color: #F3F4F6;
+}
+
+
+
+/* Mobile Menu Elements */
+.mobile-menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu-dropdown {
+    display: none;
+    position: absolute;
+    top: 80px;
+    /* Directly below header */
+    left: 0;
+    width: 100%;
+    background-color: #F3FAFF;
+    flex-direction: column;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 899;
+}
+
+.mobile-menu-dropdown.open {
+    display: flex;
+}
+
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Hero Section */
+.hero-section {
+    width: 100%;
+    /* Changed to 100% */
+    height: 823px;
+    background-color: #6B82AC;
+    position: relative;
+    overflow: hidden;
+    /* Fixes margin collapse from child elements */
+}
+
+
+/* Hero Image */
+.hero-image-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* Below text */
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Changed to cover to fill the 823px smoothly like a background */
+    display: block;
+    animation: float-bob 10s ease-in-out infinite;
+    transform-origin: center bottom;
+}
+
+@keyframes float-bob {
+    0% {
+        transform: scale(1.05) translateY(0);
+    }
+
+    50% {
+        transform: scale(1.08) translateY(-10px);
+    }
+
+    100% {
+        transform: scale(1.05) translateY(0);
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Changed to 100% */
+    height: 823px;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+}
+
+
+/* Hero Text Group */
+.hero-text-group {
+    position: relative;
+    z-index: 3;
+    /* Above image AND overlay */
+
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    /* Center horizontally */
+    margin-top: 170px;
+    /* "Start 120px below the bottom edge of the main site header" */
+    /* Since Hero Section starts right after Main Header, margin-top inside Hero works perfectly relative to the top of Hero. */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-heading {
+    font-family: 'Manrope', sans-serif;
+    font-size: 42px;
+    /* Increased by 4px */
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 1.2;
+}
+
+
+.hero-subheading {
+    margin-top: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    /* Increased by 2px */
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 1.5;
+}
+
+
+.hero-cta {
+    margin-top: 24px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 40px;
+    padding: 12px 32px;
+    cursor: pointer;
+}
+
+
+
+/* Content Section */
+.content-section {
+    width: 100%;
+    height: 892px;
+    background-color: #F3FAFF;
+    padding: 64px;
+    /* Box-sizing is globally set to border-box in Global Resets */
+    display: flex;
+    align-items: center;
+    /* Vertically center the content stack */
+}
+
+.content-stack {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    /* Space between Upper and Lower subsections */
+}
+
+.content-upper {
+    width: 100%;
+    height: 400px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upper-text-group {
+    max-width: 492px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.upper-heading {
+    margin: 0;
+    margin-bottom: 12px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    max-width: 412px;
+    line-height: normal;
+    /* Or 1.25 roughly, default is okay but usually explicit is safer. User didn't specify, sticking to defaults mostly */
+}
+
+.upper-subtext {
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #5B5F64;
+    max-width: 492px;
+    line-height: 1.5;
+    /* Standard readability */
+}
+
+.upper-image-placeholder {
+    width: 750px;
+    height: 400px;
+    background-color: transparent;
+    position: relative;
+    /* For absolute positioning of overlay */
+    overflow: hidden;
+    /* Mask the zoomed image */
+    border-radius: 24px;
+    /* Ensure radius is applied to container */
+}
+
+.content-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Border radius handled by container now */
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.content-lower {
+    width: 100%;
+    height: 300px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.lower-image-container {
+    flex: 1;
+    /* Equal width distribution */
+    height: 100%;
+    border-radius: 24px;
+    background-color: transparent;
+    position: relative;
+    /* For absolute positioning of overlay */
+    overflow: hidden;
+    /* Mask the zoomed image */
+}
+
+.lower-content-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    /* Border radius handled by container now */
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.image-overlay-text {
+    position: absolute;
+    bottom: 24px;
+    left: 16px;
+    right: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    /* Increased by 4px */
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: left;
+    pointer-events: none;
+    /* Let clicks pass through */
+    z-index: 3;
+    /* Above shadow */
+    transition: transform 0.6s ease-in-out;
+    /* Soft lifting up and going down */
+}
+
+.image-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+    /* Border radius handled by container overflow */
+    z-index: 2;
+    transition: background 0.4s ease;
+}
+
+.overlay-button {
+    position: absolute;
+    bottom: 24px;
+    left: 16px;
+    /* Determine width or let it adjust */
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0;
+    /* Hidden by default */
+    transform: translateY(40px);
+    /* Start from further down (coming from bottom) */
+    transition: all 0.5s ease-out;
+    /* transition-delay removed for instant feedback */
+}
+
+/* Hover Effects */
+.upper-image-placeholder:hover .image-overlay-text,
+.lower-image-container:hover .image-overlay-text {
+    /* Bottom stays 24px, we move it up with transform */
+    transform: translateY(-46px);
+}
+
+.upper-image-placeholder:hover .overlay-button,
+.lower-image-container:hover .overlay-button {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+    /* Slight delay so it doesn't overlap perfectly with text move */
+}
+
+.upper-image-placeholder:hover .content-image,
+.lower-image-container:hover .lower-content-image {
+    transform: scale(1.1);
+    /* Zoom effect */
+}
+
+.upper-image-placeholder:hover .image-shadow,
+.lower-image-container:hover .image-shadow {
+
+
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+/* FAQ Section */
+.faq-section {
+    width: 100%;
+    background-color: transparent;
+    padding: 64px 0;
+    /* Box-sizing global reset handles dimensions */
+    display: flex;
+    justify-content: center;
+    /* Ensure central alignment */
+}
+
+.faq-inner-group {
+    width: 800px;
+    height: 600px;
+    margin: 0;
+    display: flex;
+    padding: 16px;
+    background-color: transparent;
+    border: 8px solid #6B82AC;
+    border-radius: 40px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.faq-left,
+.faq-right {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* Manage scroll in children */
+}
+
+.faq-divider {
+    width: 1px;
+    height: 100%;
+    background-color: rgba(107, 130, 172, 0.2);
+    /* Subtle divider */
+    margin: 0 16px;
+}
+
+.faq-column-header {
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #6B82AC;
+    margin: 0;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+    /* Keep header fixed */
+}
+
+/* Questions List */
+.faq-list-container {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 8px;
+    /* Space for scrollbar if any */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Custom Scrollbar for FAQ List */
+.faq-list-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.faq-list-container::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.faq-list-container::-webkit-scrollbar-thumb {
+    background-color: #E5E7EB;
+    border-radius: 20px;
+}
+
+
+.faq-item {
+    background-color: #F3F4F6;
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1F2937;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-item:hover {
+    background-color: #E5E7EB;
+    /* Slightly darker on hover now that default is gray */
+}
+
+.faq-item.active {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.active-icon-star {
+    font-size: 20px;
+    color: #22C55E;
+    /* Bright Green */
+    font-weight: bold;
+}
+
+/* Answer Panel */
+.faq-answer-panel {
+    background-color: #6B82AC;
+    border-radius: 16px;
+    padding: 24px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 1.6;
+    height: auto;
+    /* Let it fit content, but max-height constrained by container */
+    overflow-y: auto;
+    /* Scroll if answer is huge */
+}
+
+/* Banner Section */
+.banner-section {
+    width: 100%;
+    background-color: #F3FAFF;
+    padding: 80px 100px;
+    /* Added padding bottom for shape space */
+    padding-bottom: 200px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-group {
+    width: 1000px;
+    height: 300px;
+    background-color: #6B82AC;
+    border-radius: 40px;
+    border: none;
+    box-shadow: none;
+    background-image: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 55px;
+    /* Ensure padding doesn't expand width due to box-sizing: border-box globally */
+}
+
+.banner-content-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 500px;
+    /* Limit width to keep text readable */
+}
+
+.banner-heading {
+    font-family: 'Manrope', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.banner-subtext {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.banner-btn {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5677B4;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 40px;
+    padding: 12px 32px;
+    /* Matches hero-cta dimensions */
+    cursor: pointer;
+}
+
+.banner-image-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    /* Ensure it doesn't overflow or break layout */
+    max-width: 45%;
+}
+
+.banner-image {
+    max-height: 90%;
+    /* Fit within height comfortably */
+    width: auto;
+    object-fit: contain;
+    border-radius: 50%;
+    /* Circular for globe */
+    animation: spin-slow 60s linear infinite;
+}
+
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.review-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #5B5F64;
+    margin: 0;
+    margin-bottom: 24px;
+    line-height: 1.5;
+    flex-grow: 1;
+    /* Pushes footer down if text varies */
+}
+
+.review-footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    /* Optional subtle separator? User didn't ask, but looks good. Or clean. Let's keep it clean as per "No borders" unless specified. */
+    padding-top: 16px;
+    /* Space from text */
+    border-top: none;
+    /* Resetting my thought */
+}
+
+.review-date {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    color: #000000;
+}
+
+.review-rating {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+}
+
+.star-icon {
+    color: #F5A623;
+    font-size: 14px;
+}
+
+/* Controls */
+.review-controls {
+    margin-top: 32px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+}
+
+.control-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #6B82AC;
+    background-color: transparent;
+    color: #6B82AC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.control-btn:hover {
+    background-color: rgba(107, 130, 172, 0.1);
+}
+
+.control-btn.active {
+    background-color: #6B82AC;
+    color: #FFFFFF;
+}
+
+/* ADS Section */
+.ads-section {
+    width: 100%;
+    height: auto;
+    background-color: #526992;
+    /* Updated from #927B52 */
+    padding: 80px 0;
+    /* Left/Right padding removed as requested */
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ... (intervening code: header, tags, etc. - skipping for brevity as they are unchanged) ... */
+
+/* ... (ship strip and track styles) ... */
+
+.ads-gallery-item {
+    flex: 0 0 auto;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    /* "Up and down" 16px margin */
+    border: 12px solid #5677B4;
+    /* Updated gallery border color */
+    border-radius: 40px;
+    /* Increased radius to 40px */
+    background: #fff;
+    /* Ensure border looks good */
+    box-sizing: content-box;
+    /* So border adds to size */
+    max-height: 480px;
+    /* Allow taller items */
+    transition: height 0.3s ease;
+    overflow: hidden;
+    /* Ensure image respects the rounded corners */
+}
+
+.ads-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+    width: 100%;
+    padding: 0 64px;
+    /* Move padding to inner content so text doesn't touch sides */
+}
+
+.ads-header-left {
+    max-width: 520px;
+    flex: 1;
+}
+
+.ads-heading {
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.ads-header-right {
+    flex: 1;
+    max-width: 500px;
+}
+
+.ads-subtext {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #E6F2ED;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Tags Row */
+.ads-tags-wrapper {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    padding: 0 24px;
+    /* Safe padding for small screens/resize */
+}
+
+.ads-tags-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+.ads-tag {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 999px;
+    padding: 8px 14px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    color: #FFFFFF;
+    white-space: nowrap;
+}
+
+/* Ship Animation/Gallery Strip */
+.ads-ship-strip {
+    /* No negative margins needed since parent has 0 padding */
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+
+    /* No fixed height, let content define or set reasonable min */
+    min-height: 380px;
+    /* Reduced from 480px */
+    position: relative;
+    overflow-x: auto;
+    /* Allow horizontal scroll if manual, or hidden if pure animation */
+    overflow-y: hidden;
+    display: flex;
+    align-items: center;
+    /* Hide scrollbar */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.ads-ship-strip::-webkit-scrollbar {
+    display: none;
+}
+
+.ads-gallery-track {
+    display: flex;
+    gap: 16px;
+    /* 16px space before next image */
+    padding: 16px 0;
+    /* Vertical padding only */
+    padding-left: 0;
+
+    /* Vertically center items (wave effect centering) */
+    align-items: center;
+
+    /* Continuous Animation Setup */
+    animation: gallery-scroll 40s linear infinite;
+    width: max-content;
+}
+
+@keyframes gallery-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+        /* Assuming we duplicate items for seamless loop eventually, or just simple scroll for now */
+    }
+}
+
+/* User didn't strictly ask for infinite loop of these specific photos, just "image side".
+   But "Up and down" margin suggests maybe flex layout considerations.
+   "16px margin that the last image ..Up and down" -> vertical margin.
+*/
+
+/* Wave Effect: Alternating Heights */
+.ads-gallery-item:nth-child(odd) {
+    height: 280px;
+    /* Reduced from 380px */
+}
+
+.ads-gallery-item:nth-child(even) {
+    height: 320px;
+    /* Reduced from 420px */
+}
+
+/* More complex wave pattern */
+.ads-gallery-item:nth-child(4n+1) {
+    height: 260px;
+    /* Reduced from 360px */
+}
+
+.ads-gallery-item:nth-child(4n+2) {
+    height: 340px;
+    /* Reduced from 440px */
+}
+
+.ads-gallery-item:nth-child(4n+3) {
+    height: 280px;
+    /* Reduced from 380px */
+}
+
+.ads-gallery-item:nth-child(4n+0) {
+    height: 320px;
+    /* Reduced from 420px */
+}
+
+
+.ads-gallery-img {
+    display: block;
+    height: 100%;
+    /* Match container height */
+    width: auto;
+    object-fit: cover;
+}
+
+/* Why Alpha Romeo Section */
+.benefit-section {
+    width: 100%;
+    padding: 80px 64px;
+    background-color: #FFFFFF;
+    /* White background */
+    display: flex;
+    flex-direction: column;
+    /* Aligned slightly left (default flex-start horizontally for container content?) 
+       But header needs max-width 720px. Let's use standard container logic. */
+    box-sizing: border-box;
+}
+
+.benefit-header {
+    text-align: left;
+    /* Align slightly to left */
+    max-width: 600px;
+    /* Increased width to 600px as requested */
+    margin-bottom: 56px;
+    width: 100%;
+}
+
+.benefit-heading {
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    /* Matched to .upper-heading */
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 12px 0;
+    line-height: normal;
+}
+
+.benefit-subtext {
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    /* Matched to .upper-subtext */
+    font-weight: 400;
+    color: #5B5F64;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.benefit-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns on desktop */
+    gap: 32px;
+    /* Generous spacing */
+    width: 100%;
+    /* No max width specified, usually matches main content, let's keep it fluid or max 1200 effectively */
+    max-width: 100%;
+}
+
+.benefit-card {
+    background: #F3FAFF;
+    padding: 28px;
+    border-radius: 24px;
+    box-shadow: none;
+    /* No shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: transform 0.3s ease;
+    border: none;
+    /* No border */
+}
+
+/* Optional hover for feel */
+.benefit-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon wrapper removed/hidden as per new spec "Optional" but not in text */
+.benefit-icon-wrapper {
+    display: none;
+}
+
+.benefit-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    /* SemiBold */
+    color: #000000;
+    margin: 0 0 12px 0;
+}
+
+.benefit-desc {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    /* Regular */
+    color: #5B5F64;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive adjustment for Benefit Section */
+@media (max-width: 1024px) {
+    .benefit-grid {
+        grid-template-columns: repeat(2, 1fr);
+        /* 2 cols on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    .benefit-section {
+        padding: 64px 24px;
+    }
+
+    .benefit-header {
+        max-width: 100%;
+    }
+
+    .benefit-grid {
+        grid-template-columns: 1fr;
+        /* 1 col on mobile */
+    }
+}
+
+/* Review Section */
+.review-section {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 64px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.review-header {
+    max-width: 700px;
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.review-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 8px;
+}
+
+.review-subtext {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #5B5F64;
+    margin: 0;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    width: 100%;
+    max-width: 1200px;
+    /* Constrain width for large screens */
+}
+
+.review-card {
+    flex: 1;
+    /* Equal width */
+    background-color: #F7FAFB;
+    border-radius: 24px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border: 1px solid transparent;
+    /* Reserve space for border */
+}
+
+.review-card.highlighted {
+    border: 1px solid #6B82AC;
+}
+
+.review-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+.review-name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.review-role {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    font-weight: 400;
+    color: #6B82AC;
+    margin: 0;
+    margin-bottom: 12px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+    .landing-page {
+        width: 100%;
+        /* Fluid on smaller screens */
+        height: auto;
+        /* Allow scrolling */
+    }
+
+    .floating-notice {
+        width: 100%;
+        left: 0;
+        transform: none;
+        padding: 12px 16px;
+        justify-content: center;
+        /* Center content again */
+        position: fixed;
+        /* Ensure it stays fixed/relative anchor */
+    }
+
+    .notice-text {
+        font-size: 12px;
+        /* Responsive size */
+        white-space: normal;
+        text-align: center;
+        margin-right: 0;
+        /* No margin needed */
+        flex: 0 1 auto;
+        /* Reset flex */
+        width: auto;
+        line-height: 1.4;
+        max-width: 85%;
+        /* Ensure it doesn't overlap the icon too much if text is long */
+    }
+
+    /* FAQ Section Responsive */
+    .faq-inner-group {
+        width: 100%;
+        max-width: 800px;
+        height: auto;
+        flex-direction: column-reverse;
+        /* Answers (Right) on top, Questions (Left) on bottom */
+        border: none;
+    }
+
+    /* "Just one single labelling faqs" - Hide Answer header */
+    .faq-right .faq-column-header {
+        display: none;
+    }
+
+    .faq-left,
+    .faq-right {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Add space between Answer (top) and Questions (bottom) */
+    .faq-right {
+        margin-bottom: 24px;
+    }
+
+    .faq-divider {
+        display: none;
+        /* Remove divider in vertical stack */
+    }
+
+    /* Horizontal Scroll Pattern */
+    .faq-list-container {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        max-height: none;
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+        /* Space before answer */
+    }
+
+    .faq-item {
+        min-width: 260px;
+        /* Fix width for horizontal items */
+        flex: 0 0 auto;
+        /* Don't shrink */
+    }
+
+
+    .close-icon-container {
+        display: flex;
+        /* Show close icon */
+        position: absolute;
+        /* Float it */
+        right: 16px;
+        /* 16px from the side */
+        top: 50%;
+        transform: translateY(-50%);
+        /* Vertically center */
+    }
+
+    .main-header {
+        width: 100%;
+        padding: 0 16px;
+        /* Reduced to 16px */
+    }
+
+    .notice-content {
+        max-width: 100%;
+    }
+
+    /* Shape Divider Global */
+    .custom-shape-divider-bottom {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        z-index: 1;
+    }
+
+    .custom-shape-divider-bottom svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 50px;
+        /* Reduced height for mobile */
+    }
+
+    .custom-shape-divider-bottom .shape-fill {
+        fill: #FFFFFF;
+    }
+
+    /* Reset max-width override */
+
+
+
+    .desktop-nav,
+    .desktop-cta {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .hero-section {
+        width: 100%;
+        height: auto;
+        min-height: 500px;
+        /* Reasonable mobile height */
+    }
+
+    .hero-image-container,
+    .hero-overlay,
+    .hero-image {
+        /* Keep them filling the container */
+        width: 100%;
+        height: 100%;
+    }
+
+
+    /* Hero Responsiveness */
+    .hero-text-group {
+        margin-top: 100px;
+        /* Shift text up significant (was 170px) */
+        padding: 0 16px;
+        /* Reduced to 16px */
+        /* Add side padding to prevent edge collision */
+    }
+
+    .hero-heading {
+        font-size: 32px;
+        /* Smaller heading for mobile (was 42px) */
+    }
+
+    .hero-subheading {
+        font-size: 16px;
+        /* Smaller subheading (was 18px) */
+    }
+
+
+
+    /* ADS Section Responsive */
+    .ads-section {
+        padding: 48px 24px;
+    }
+
+    .ads-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 24px;
+        margin-bottom: 32px;
+    }
+
+    .ads-header-left,
+    .ads-header-right {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .ads-heading {
+        font-size: 32px;
+    }
+
+    .ads-tags-row {
+        gap: 12px;
+    }
+
+    .ads-tag {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    .ads-ship-strip {
+        /* Adjust negative margins for mobile padding */
+        margin-left: -24px;
+        margin-right: -24px;
+        width: calc(100% + 48px);
+        height: 280px;
+        /* Shorter strip */
+        min-height: auto;
+    }
+
+    .ads-gallery-item {
+        max-height: 200px;
+        border-width: 8px;
+        /* Slightly thinner border on mobile? User didn't ask, but looks proportional. Let's keep 12px if strict. */
+    }
+
+    .ads-gallery-img {
+        height: 200px;
+        /* Scaled down ship */
+    }
+
+    /* Content Section Responsiveness */
+    .content-section {
+        height: auto;
+        padding: 40px 16px;
+        /* Reduced to 16px */
+    }
+
+    .content-stack {
+        gap: 40px;
+    }
+
+    .content-upper {
+        flex-direction: column;
+        height: auto;
+        gap: 32px;
+    }
+
+    .upper-text-group {
+        max-width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .upper-heading {
+        max-width: 100%;
+        font-size: 24px;
+        /* Slightly smaller heading */
+    }
+
+    .upper-subtext {
+        max-width: 100%;
+    }
+
+    .upper-image-placeholder {
+        width: 100%;
+        height: 300px;
+        /* Reduce height for mobile */
+    }
+
+    .content-lower {
+        flex-direction: column;
+        height: auto;
+        gap: 24px;
+    }
+
+    .lower-image-container {
+        width: 100%;
+        height: 300px;
+        /* Maintained height but full width */
+    }
+
+    /* Banner Section Responsiveness */
+    .banner-section {
+        padding: 40px 16px;
+        padding-bottom: 100px;
+        /* Reduced space for shape on mobile */
+    }
+
+    .banner-group {
+        width: 100%;
+        height: auto;
+        /* Allow height to grow on mobile */
+        flex-direction: column;
+        justify-content: center;
+        padding: 32px 24px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .banner-content-left {
+        max-width: 100%;
+        align-items: center;
+        margin-bottom: 24px;
+    }
+
+    .banner-heading {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .banner-subtext {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .banner-image-right {
+        max-width: 100%;
+        width: 100%;
+        justify-content: center;
+        height: 200px;
+        /* Fixed height for image area on mobile */
+    }
+
+    .banner-image {
+        max-height: 100%;
+        width: auto;
+    }
+}
+
+/* Proof/Stats Section */
+.proof-section {
+    width: 100%;
+    padding: 64px 100px;
+    background-color: #6B82AC;
+    /* Maintaining primary color background from old proof section or white? User said "Return the old proof section". The old one had #6B82AC. I will use that for consistency if "Return" implies visual restoration. */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.proof-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* Equal spacing: Left, Center, Right */
+    align-items: flex-start;
+}
+
+.proof-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 16px;
+    color: #FFFFFF;
+    /* White text on blue background */
+}
+
+.proof-number {
+    font-family: 'Manrope', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+    line-height: 1;
+}
+
+.proof-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #E6F2ED;
+    /* Light text similar to old placeholder */
+    line-height: 1.5;
+    max-width: 260px;
+}
+
+/* Responsive Proof Section */
+@media (max-width: 768px) {
+    .proof-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .proof-section {
+        padding: 64px 24px;
+        height: auto;
+    }
+}

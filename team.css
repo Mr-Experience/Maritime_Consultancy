@@ -1,0 +1,200 @@
+/* Team Page Styles */
+
+/* Reuse global resets and font setup from styles.css */
+.team-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding-top: 128px;
+    /* Offset for Fixed Headers */
+}
+
+/* Team Hero */
+.team-hero {
+    width: 100%;
+    height: 400px;
+    background-color: #6B82AC;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.team-hero-content {
+    max-width: 800px;
+    padding: 0 24px;
+    z-index: 2;
+}
+
+.team-hero-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.team-hero-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Intro */
+.team-intro {
+    padding: 80px 24px;
+    background-color: #F3FAFF;
+    display: flex;
+    justify-content: center;
+}
+
+.intro-container {
+    max-width: 900px;
+    text-align: center;
+}
+
+.centered-desc {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    color: #5B5F64;
+    line-height: 1.8;
+}
+
+/* Team Grid */
+.team-grid-section {
+    padding: 80px 24px;
+    background-color: #FFFFFF;
+}
+
+.team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+}
+
+.team-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+}
+
+.team-img-wrapper {
+    width: 100%;
+    height: 280px;
+    background-color: #E5E7EB;
+    overflow: hidden;
+}
+
+.team-img-placeholder {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.4s ease;
+}
+
+.team-card:hover .team-img-placeholder {
+    transform: scale(1.05);
+}
+
+.team-info {
+    padding: 24px;
+    text-align: center;
+}
+
+.team-name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.team-role {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #6B82AC;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+}
+
+.team-bio {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #5B5F64;
+    line-height: 1.6;
+}
+
+/* CTA */
+.join-team-cta {
+    background-color: #6B82AC;
+    padding: 80px 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.cta-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.cta-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    margin-bottom: 32px;
+    opacity: 0.9;
+}
+
+.btn-join-team {
+    display: inline-block;
+    background-color: #FFFFFF;
+    color: #000000;
+    padding: 14px 32px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn-join-team:hover {
+    background-color: #F3FAFF;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .team-container {
+        grid-template-columns: 1fr;
+    }
+
+    .team-hero-title {
+        font-size: 40px;
+    }
+}

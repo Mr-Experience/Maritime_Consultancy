@@ -1,0 +1,241 @@
+/* Careers Page Styles */
+
+/* Base Page Setup */
+.careers-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding-top: 128px;
+    /* Fixed header offset */
+}
+
+/* Careers Hero */
+.careers-hero {
+    width: 100%;
+    height: 400px;
+    background-color: #6B82AC;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Reuse maritime hero or specific one if needed, using generic maritime for now */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.careers-hero-content {
+    max-width: 800px;
+    padding: 0 24px;
+    z-index: 2;
+}
+
+.careers-hero-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.careers-hero-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Global Section Specs */
+.career-section {
+    padding: 96px 64px;
+    /* Desktop padding */
+    display: flex;
+    justify-content: center;
+    background-color: #FFFFFF;
+    /* Explicit white everywhere */
+}
+
+.career-container {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* Vertically center */
+    gap: 64px;
+    /* Internal column gap */
+}
+
+/* Section 1: Working at Alpha Romeo (Image Left) */
+.working-section .career-container {
+    flex-direction: row;
+}
+
+/* Section 2: Recruitment (Image Right) */
+/* Section 2: Recruitment (Image Right) */
+.recruitment-section .career-container {
+    /* flex-direction: row; // Default is row, so just removing reverse is enough */
+}
+
+.recruitment-section {
+    padding-bottom: 216px;
+    /* 96px + 120px for shape */
+    position: relative;
+}
+
+/* Shape Divider */
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* Columns */
+.career-col-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.career-col-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* Align text left */
+}
+
+/* Image Styling */
+.career-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    /* 12-16px requested */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    max-height: 600px;
+    /* Constrain height reasonably */
+}
+
+/* Text Typography */
+.pre-heading {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #6B82AC;
+    /* Brand color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    display: block;
+}
+
+.main-heading {
+    font-family: 'Manrope', sans-serif;
+    font-size: 36px;
+    /* Section 1 requested 36px */
+    font-weight: 700;
+    color: #1F2937;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.recruitment-heading {
+    font-size: 32px;
+    /* Section 2 requested 32px, SemiBold */
+    font-weight: 600;
+}
+
+.body-text {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #4B5563;
+    margin-bottom: 32px;
+}
+
+.body-text p {
+    margin-bottom: 16px;
+}
+
+.body-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Buttons */
+.btn-career-cta {
+    background-color: #6B82AC;
+    color: #FFFFFF;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 14px 32px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-career-cta:hover {
+    background-color: #5A6E91;
+}
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .career-section {
+        padding: 64px 24px;
+        /* Reduced side padding on mobile/tablet */
+    }
+
+    .recruitment-section {
+        padding-bottom: 100px;
+        /* Reduced for mobile shape */
+    }
+
+    .career-container,
+    .working-section .career-container,
+    .recruitment-section .career-container {
+        flex-direction: column;
+        /* Stack vertically */
+        gap: 40px;
+    }
+
+    .career-col-image,
+    .career-col-text {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .career-col-text {
+        align-items: flex-start;
+        /* Keep text left aligned usually better, or center if preferred. User requested professional. Left align text blocks is usually cleaner. */
+        text-align: left;
+    }
+
+    .custom-shape-divider-bottom svg {
+        height: 50px;
+    }
+}

@@ -1,0 +1,214 @@
+/* About Page Specific Styles */
+
+/* Reuse global resets and font setup from styles.css */
+/* Ensuring the page container behaves like the landing page */
+.about-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding-top: 128px;
+    /* Offset for Fixed Headers */
+}
+
+/* About Hero Section */
+.about-hero {
+    width: 100%;
+    height: 400px;
+    /* Shorter than landing hero */
+    background-color: #6B82AC;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-image.jpg');
+    /* Reuse existing image or placeholder */
+    background-size: cover;
+    background-position: center;
+}
+
+.about-hero-content {
+    max-width: 800px;
+    padding: 0 24px;
+    z-index: 2;
+}
+
+.about-hero-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 56px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 16px;
+}
+
+.about-hero-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 1.6;
+}
+
+/* Mission & Vision Section */
+.mission-vision-section {
+    padding: 80px 64px;
+    background-color: #F3FAFF;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* For the shape */
+    padding-bottom: 120px;
+    /* Extra space for wave */
+}
+
+.custom-shape-divider-bottom svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 1;
+}
+
+.custom-shape-divider-bottom .shape-fill {
+    fill: #FFFFFF;
+}
+
+.mv-container {
+    max-width: 1200px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.mv-card {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.mv-card:hover {
+    transform: translateY(-5px);
+}
+
+.mv-card h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #6B82AC;
+    margin-bottom: 16px;
+}
+
+.mv-card p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #5B5F64;
+}
+
+/* Overview Section */
+.overview-section {
+    padding: 80px 64px;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: center;
+}
+
+.overview-content {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+}
+
+.overview-text {
+    flex: 1;
+}
+
+.section-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.section-desc {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    color: #5B5F64;
+    margin-bottom: 16px;
+}
+
+.overview-image {
+    flex: 1;
+    height: 400px;
+    border-radius: 24px;
+    overflow: hidden;
+}
+
+.img-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #E5E7EB;
+    /* In a real scenario, use an img tag with object-fit: cover */
+    background-image: url('images/');
+    /* Reusing existing asset */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Stats Section */
+.about-stats {
+    background-color: #6B82AC;
+    padding: 64px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.stat-number {
+    display: block;
+    font-family: 'Manrope', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .mv-container {
+        grid-template-columns: 1fr;
+    }
+
+    .overview-content {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .overview-image {
+        width: 100%;
+        height: 300px;
+    }
+}
