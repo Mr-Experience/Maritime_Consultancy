@@ -22,8 +22,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-image.jpg');
-    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-v3.jpg');
+    background-size: 107%;
     background-position: center;
 }
 
@@ -51,8 +51,8 @@
 
 /* Intro */
 .team-intro {
-    padding: 80px 24px;
-    background-color: #F3FAFF;
+    padding: 80px 24px 60px;
+    background-color: #F9FAFB;
     display: flex;
     justify-content: center;
 }
@@ -65,13 +65,122 @@
 .centered-desc {
     font-family: 'Manrope', sans-serif;
     font-size: 18px;
-    color: #5B5F64;
+    color: #4B5563;
     line-height: 1.8;
 }
 
-/* Team Grid */
+/* Founder Section */
+.founder-section {
+    padding: 100px 40px;
+    background-color: #FFFFFF;
+}
+
+.founder-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.founder-img-wrapper {
+    height: 500px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.founder-text-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.member-label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #6B82AC;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.member-name {
+    font-family: 'Manrope', sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    color: #001F3F;
+    margin-bottom: 24px;
+}
+
+.member-quote {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-style: italic;
+    color: #6B82AC;
+    margin-bottom: 32px;
+    line-height: 1.4;
+    position: relative;
+    padding-left: 20px;
+    border-left: 4px solid #6B82AC;
+}
+
+.member-bio p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: #4B5563;
+    margin-bottom: 20px;
+}
+
+/* Featured Member Section (Side-by-Side) */
+.featured-member-section {
+    padding: 100px 40px;
+    background-color: #F9FAFB;
+}
+
+.featured-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.featured-img-wrapper {
+    height: 450px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Team Grid Header */
+.team-grid-header {
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.team-grid-header h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: #001F3F;
+    margin-bottom: 16px;
+}
+
+.header-line {
+    width: 60px;
+    height: 4px;
+    background-color: #6B82AC;
+    margin: 0 auto;
+    border-radius: 2px;
+}
+
 .team-grid-section {
-    padding: 80px 24px;
+    padding: 100px 40px;
     background-color: #FFFFFF;
 }
 
@@ -184,6 +293,21 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
+
+    .founder-container,
+    .featured-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .featured-container .featured-text-col {
+        order: 2;
+    }
+
+    .featured-container .featured-image-col {
+        order: 1;
+    }
+
     .team-container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -196,5 +320,29 @@
 
     .team-hero-title {
         font-size: 40px;
+    }
+}
+
+/* Mobile Spacing Optimization (< 500px) */
+@media (max-width: 500px) {
+
+    .team-hero-section,
+    .leadership-section,
+    .cta-section {
+        padding: 48px 16px !important;
+    }
+
+    .team-container {
+        gap: 16px !important;
+    }
+
+    .cta-title,
+    .cta-subtitle {
+        margin-bottom: 16px !important;
+    }
+
+    .leader-info h3,
+    .leader-info .job-title {
+        margin-bottom: 16px !important;
     }
 }

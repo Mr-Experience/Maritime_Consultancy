@@ -22,8 +22,8 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-image.jpg');
-    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-v3.jpg');
+    background-size: 107%;
     background-position: center;
 }
 
@@ -273,5 +273,32 @@
 
     .category-line {
         display: none;
+    }
+}
+
+/* Mobile Spacing Optimization (< 500px) */
+@media (max-width: 500px) {
+
+    .fleets-showcase-section,
+    .category-section {
+        padding: 48px 16px !important;
+    }
+
+    .fleet-grid,
+    .category-header {
+        gap: 16px !important;
+    }
+
+    .vessel-name,
+    .vessel-type {
+        margin-bottom: 16px !important;
+    }
+
+    .vessel-specs-list li {
+        margin-bottom: 16px !important;
+    }
+
+    .vessel-specs-list li:last-child {
+        margin-bottom: 0 !important;
     }
 }

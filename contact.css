@@ -54,30 +54,10 @@
     align-items: center;
     background-color: #F9FAFB;
     position: relative;
-    padding-bottom: 200px;
-    /* Space for the U-shape */
+    padding-bottom: 100px;
 }
 
-/* U-Shape Divider */
-.custom-shape-divider-contact {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
 
-.custom-shape-divider-contact svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 100px;
-}
-
-.custom-shape-divider-contact .shape-fill {
-    fill: #FFFFFF;
-}
 
 /* New Contact Info Strip */
 .contact-info-strip {
@@ -333,12 +313,40 @@
         /* Reduced for mobile shape */
     }
 
-    .custom-shape-divider-contact svg {
-        height: 50px;
-    }
+
 
     .support-side-panel {
         order: 2;
         /* Put form first? Or Side panel first? Usually form is priority, but visual reference might suggest otherwise. Let's keep order natural (1). */
+    }
+}
+
+/* Mobile Spacing Optimization (< 500px) */
+@media (max-width: 500px) {
+
+    .contact-hero,
+    .contact-content-section {
+        padding: 48px 16px !important;
+    }
+
+    .contact-info-strip {
+        gap: 16px !important;
+    }
+
+    .contact-container {
+        gap: 16px !important;
+    }
+
+    .form-group {
+        margin-bottom: 16px !important;
+    }
+
+    .strip-text h3,
+    .strip-text p {
+        margin-bottom: 16px !important;
+    }
+
+    .strip-text p:last-child {
+        margin-bottom: 0 !important;
     }
 }

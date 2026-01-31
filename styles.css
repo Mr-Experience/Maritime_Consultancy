@@ -187,7 +187,8 @@ body {
 
 .nav-link.active {
     color: #6B82AC;
-    font-weight: 600;
+    font-weight: 800;
+    /* Increased weight for better visibility */
 }
 
 .btn-get-quotes {
@@ -325,10 +326,12 @@ body {
 }
 
 .hero-image {
-    width: 100%;
-    height: 100%;
+    width: 103%;
+    height: 103%;
     object-fit: cover;
-    /* Changed to cover to fill the 823px smoothly like a background */
+    /* Slightly enlarge and shift to hide the watermark in the corner (V3 Image) */
+    margin-left: -1.5%;
+    margin-top: -1.5%;
     display: block;
     animation: float-bob 10s ease-in-out infinite;
     transform-origin: center bottom;
@@ -411,6 +414,9 @@ body {
     border-radius: 40px;
     padding: 12px 32px;
     cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    outline: none;
 }
 
 
@@ -766,13 +772,13 @@ body {
     width: 100%;
     background-color: #F3FAFF;
     padding: 80px 100px;
-    /* Added padding bottom for shape space */
-    padding-bottom: 200px;
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+
 
 .banner-group {
     width: 1000px;
@@ -1477,28 +1483,7 @@ body {
         max-width: 100%;
     }
 
-    /* Shape Divider Global */
-    .custom-shape-divider-bottom {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        overflow: hidden;
-        line-height: 0;
-        z-index: 1;
-    }
 
-    .custom-shape-divider-bottom svg {
-        position: relative;
-        display: block;
-        width: calc(100% + 1.3px);
-        height: 50px;
-        /* Reduced height for mobile */
-    }
-
-    .custom-shape-divider-bottom .shape-fill {
-        fill: #FFFFFF;
-    }
 
     /* Reset max-width override */
 
@@ -1798,5 +1783,54 @@ body {
     .header-right {
         margin-right: 16px;
         gap: 0;
+    }
+}
+
+/* Mobile Spacing Optimization (< 500px) */
+@media (max-width: 500px) {
+
+    /* Section containers should have consistent vertical gaps */
+    .hero-text-group,
+    .ads-header,
+    .content-stack,
+    .content-upper,
+    .content-lower,
+    .upper-text-group,
+    .banner-group,
+    .banner-content-left,
+    .proof-container,
+    .faq-inner-group {
+        gap: 16px !important;
+    }
+
+    /* Individual element spacing refinements */
+    .hero-heading,
+    .hero-subheading,
+    .upper-heading,
+    .upper-subtext,
+    .banner-heading,
+    .banner-subtext,
+    .proof-number,
+    .faq-column-header {
+        margin-bottom: 16px !important;
+    }
+
+    /* Reset last items to avoid double padding if necessary */
+    .hero-subheading,
+    .upper-subtext,
+    .banner-subtext,
+    .proof-text,
+    .faq-item:last-child {
+        margin-bottom: 0 !important;
+    }
+
+    /* Adjust padding for tighter sections on small screens */
+    .ads-section,
+    .content-section,
+    .banner-section,
+    .proof-section,
+    .review-section,
+    .benefit-section {
+        padding: 32px 16px !important;
     }
 }

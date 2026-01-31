@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operations - Romeo Alpha maritime consultancy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer_styles.css">
+    <link rel="stylesheet" href="operations.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="operations-page" id="top-anchor">
+
+        <!-- Floating Notice Header -->
+        <div class="floating-notice">
+            <div class="notice-content">
+                <span class="notice-text" data-translate="Notice Welcome">Welcome to Romeo Alpha maritime consultancy &
+                    Logistics International Ltd</span>
+                <div class="close-icon-container">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 3L3 9M3 3L9 9" stroke="#6B82AC" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Site Header -->
+        <header class="main-header">
+            <div class="header-left">
+                <a href="index.html">
+                    <img src="images/logo-alpha.jpg" alt="Company Logo" class="logo">
+                </a>
+            </div>
+            <nav class="header-center desktop-nav">
+                <a href="about.html" class="nav-link" data-translate="About us">About us</a>
+                <a href="fleets.html" class="nav-link" data-translate="Our fleets">Our fleets</a>
+                <a href="team.html" class="nav-link" data-translate="Our team">Our team</a>
+                <a href="careers.html" class="nav-link" data-translate="Careers">Careers</a>
+                <a href="contact.html" class="nav-link" data-translate="Contact us">Contact us</a>
+            </nav>
+            <div class="header-right">
+                <div class="language-selector" id="language-selector">
+                    <div class="language-trigger">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 12H22" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="language-text" id="current-lang-text">EN</span>
+                    </div>
+                    <div class="language-dropdown">
+                        <div class="lang-option" data-lang="en">English</div>
+                        <div class="lang-option" data-lang="es">Español</div>
+                        <div class="lang-option" data-lang="fr">Français</div>
+                        <div class="lang-option" data-lang="de">Deutsch</div>
+                        <div class="lang-option" data-lang="zh">中文 (Chinese)</div>
+                    </div>
+                </div>
+                <button class="btn-get-quotes desktop-cta" data-translate="Get Quotes">Get quotes</button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <svg class="icon-hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21M3 6H21M3 18H21" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </header>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="mobile-menu-dropdown">
+            <nav class="mobile-nav">
+                <a href="about.html" class="nav-link">About us</a>
+                <a href="fleets.html" class="nav-link">Our fleets</a>
+                <a href="team.html" class="nav-link">Our team</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact us</a>
+            </nav>
+            <div class="mobile-cta">
+                <button class="btn-get-quotes">Get quotes</button>
+            </div>
+        </div>
+
+        <!-- Operations Hero / Search Section -->
+        <section class="operations-hero">
+            <div class="operations-container">
+                <h1 class="operations-title" data-translate="Operations Page Title">Our Operations</h1>
+                <p class="operations-subtitle" data-translate="Operations Page Subtitle">Explore our range of
+                    professional maritime and offshore services.</p>
+
+                <div class="search-box-container">
+                    <input type="text" id="operation-search" class="operation-search-input"
+                        placeholder="Search for a service..." data-translate-placeholder="Search Placeholder">
+                    <div class="search-icon">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="category-tabs-container">
+                    <div class="category-tabs" id="category-tabs">
+                        <button class="category-tab active" data-category="all" data-translate="Category All">All
+                            Services</button>
+                        <button class="category-tab" data-category="offshore"
+                            data-translate="Category Offshore">Offshore Support</button>
+                        <button class="category-tab" data-category="logistics"
+                            data-translate="Category Logistics">Marine Logistics</button>
+                        <button class="category-tab" data-category="charter" data-translate="Category Charter">Vessel
+                            Charter</button>
+                        <button class="category-tab" data-category="port" data-translate="Category Port">Port & Coastal
+                            Services</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Operations Grid -->
+        <section class="operations-grid-section">
+            <div class="operations-container">
+                <div class="operations-grid" id="operations-grid">
+                    <!-- Operation Cards will be populated here by JS -->
+                </div>
+                <div id="no-results" class="no-results" style="display: none;">
+                    <p data-translate="No Results">No operations found matching your search.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="footer-main-group" style="border-top: none;">
+                <div class="footer-col">
+                    <h3 data-translate="Footer Subscribe Heading">Subscribe to our newsletter</h3>
+                    <form class="footer-newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Email" required>
+                            <button type="submit" data-translate="Footer Subscribe Btn">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="footer-col footer-col-middle">
+                    <h3 data-translate="Footer Business Heading">Doing Business Together</h3>
+                    <ul class="footer-services-list">
+                        <li><a href="index.html#services" data-translate="Footer Link What">What we do</a></li>
+                        <li><a href="fleets.html" data-translate="Footer Link Fleets">Our fleets</a></li>
+                        <li><a href="index.html#offshore" data-translate="Footer Link Offshore">Offshore services</a>
+                        </li>
+                        <li><a href="index.html#security" data-translate="Footer Link Security">Marine security</a></li>
+                        <li><a href="index.html#charter" data-translate="Footer Link Charter">Vessel charter &
+                                management</a></li>
+                        <li><a href="index.html#partnership" data-translate="Footer Link Partnership">Partnerships</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col-middle">
+                    <h3 data-translate="Footer Know Heading">Get to know Us</h3>
+                    <ul class="footer-services-list">
+                        <li><a href="about.html" data-translate="Footer Link About">About Alpha Romeo</a></li>
+                        <li><a href="index.html#insights" data-translate="Footer Link News">News & Insights</a></li>
+                        <li><a href="careers.html" data-translate="Footer Link Careers">Careers</a></li>
+                        <li><a href="contact.html" data-translate="Footer Link Contact">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Scroll to Top Button -->
+            <a href="#top-anchor" class="scroll-top-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 19V5M5 12l7-7 7 7" />
+                </svg>
+                <span data-translate="Scroll Top">Top</span>
+            </a>
+
+            <div class="footer-secondary-group">
+                <span>Headquater - 234 8144091443 - info@Alpharomeo.com - Portharcourt, Nigeria.</span>
+            </div>
+            <div class="copyright-group">
+                <span>&copy; 2026 Romeo Alpha Maritime Consultancy & Logistics International Ltd</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Operations Logic -->
+    <script>
+        const operationsData = [
+            {
+                id: 1,
+                category: 'offshore',
+                title: 'Anchor Handling',
+                description: 'Specialized vessels for anchor deployment, recovery, and rig moving operations in challenging offshore environments.',
+                longDescription: 'We specialize in providing high-performance vessels equipped for complex anchor handling, towing, and supply operations. Our expertise in rig moving ensures that deep-sea installations are handled with precision and safety. With a fleet of specialized Anchor Handling Tug Supply (AHTS) vessels, we deliver reliability in the most demanding maritime environments.',
+                image: 'images/ads-gallery-1.jpg',
+                gallery: ['images/ads-gallery-1.jpg', 'images/hero-v3.jpg', 'images/bottom-3.jpg', 'images/bottom-4.jpg'],
+                tags: ['Support', 'Offshore', 'Rig Move'],
+                cta: 'Request Quote'
+            },
+            {
+                id: 2,
+                category: 'logistics',
+                title: 'Ocean Freight',
+                description: 'Global logistics solutions for bulky and heavy maritime cargo, ensuring safe delivery across international waters.',
+                longDescription: 'Our ocean freight services combine global reach with meticulous planning to ensure your bulky or heavy cargo reaches its destination safely and on time. We manage the entire logistics chain, from port-to-port transportation to specialized handling for oversized loads. Our commitment to excellence makes us a trusted partner for international maritime logistics.',
+                image: 'images/shipping-logistics.jpg',
+                gallery: ['images/shipping-logistics.jpg', 'images/bottom-1.jpg', 'images/bottom-2.jpg', 'images/ads-gallery-2.jpg'],
+                tags: ['International', 'Cargo', 'Logistics'],
+                cta: 'Hire This Service'
+            },
+            {
+                id: 3,
+                category: 'charter',
+                title: 'Platform Supply Vessels',
+                description: 'Reliable charter options for platform supply vessels (PSV) to support offshore installations and drilling rigs.',
+                longDescription: 'We provide a versatile fleet of Platform Supply Vessels (PSV) designed to support offshore oil and gas platforms. Our vessels are capable of transporting a wide range of essential supplies, including fuel, water, and specialized equipment. With advanced positioning systems and experienced crews, we ensure seamless offshore logistics support.',
+                image: 'images/hero-v3.jpg',
+                gallery: ['images/hero-v3.jpg', 'images/ads-gallery-3.jpg', 'images/bottom-2.jpg', 'images/bottom-3.jpg'],
+                tags: ['Charter', 'Supply', 'PSV'],
+                cta: 'Check Availability'
+            }
+        ];
+
+        const grid = document.getElementById('operations-grid');
+        const searchInput = document.getElementById('operation-search');
+        const tabs = document.querySelectorAll('.category-tab');
+        const noResults = document.getElementById('no-results');
+
+        let activeCategory = 'all';
+        let searchQuery = '';
+
+        function renderCards() {
+            grid.innerHTML = '';
+            const filtered = operationsData.filter(op => {
+                const matchesCategory = activeCategory === 'all' || op.category === activeCategory;
+                const matchesSearch = op.title.toLowerCase().includes(searchQuery) ||
+                    op.description.toLowerCase().includes(searchQuery);
+                return matchesCategory && matchesSearch;
+            });
+
+            if (filtered.length === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+                filtered.forEach(op => {
+                    const card = document.createElement('div');
+                    card.className = 'operation-card';
+                    card.innerHTML = `
+                        <div class="op-card-image">
+                            <img src="${op.image}" alt="${op.title}">
+                        </div>
+                        <div class="op-card-content">
+                            <h3 class="op-card-title">${op.title}</h3>
+                            <p class="op-card-desc">${op.description}</p>
+                            <div class="op-card-tags">
+                                ${op.tags.map(tag => `<span class="op-tag">${tag}</span>`).join('')}
+                            </div>
+                            <a href="operation-detail.html?id=${op.id}" class="op-card-cta-link" style="text-decoration: none; width: 100%;">
+                                <button class="op-card-cta">${op.cta}</button>
+                            </a>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            }
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                activeCategory = tab.dataset.category;
+                renderCards();
+            });
+        });
+
+        searchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase();
+            renderCards();
+        });
+
+        window.addEventListener('DOMContentLoaded', renderCards);
+
+        // Header Logic (Reuse from other pages)
+        const noticeHeader = document.querySelector('.floating-notice');
+        const noticeCloseBtn = document.querySelector('.floating-notice .close-icon-container');
+        const mainHeader = document.querySelector('.main-header');
+        const operationsPage = document.querySelector('.operations-page');
+        const mobileMenu = document.querySelector('.mobile-menu-dropdown');
+
+        if (noticeCloseBtn) {
+            noticeCloseBtn.addEventListener('click', () => {
+                noticeHeader.style.display = 'none';
+                mainHeader.style.top = '0';
+                operationsPage.style.paddingTop = '80px';
+                if (mobileMenu) mobileMenu.style.top = '80px';
+            });
+        }
+
+        const toggleBtn = document.querySelector('.mobile-menu-toggle');
+        const hamburgerIcon = document.querySelector('.icon-hamburger');
+        const closeIcon = document.querySelector('.icon-close');
+
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.toggle('open');
+                if (mainHeader.style.top === '0px') {
+                    mobileMenu.style.top = '80px';
+                } else {
+                    mobileMenu.style.top = '128px';
+                }
+                if (isOpen) {
+                    hamburgerIcon.style.display = 'none';
+                    closeIcon.style.display = 'block';
+                } else {
+                    hamburgerIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                }
+            });
+        }
+
+        // Language Selector logic
+        const langSelector = document.getElementById('language-selector');
+        const currentLangText = document.getElementById('current-lang-text');
+        const langOptions = document.querySelectorAll('.lang-option');
+
+        const translations = {
+            'en': {
+                'Operations Page Title': 'Our Operations',
+                'Operations Page Subtitle': 'Explore our range of professional maritime and offshore services.',
+                'Search Placeholder': 'Search for a service...',
+                'Category All': 'All Services',
+                'Category Offshore': 'Offshore Support',
+                'Category Logistics': 'Marine Logistics',
+                'Category Charter': 'Vessel Charter',
+                'Category Port': 'Port & Coastal Services',
+                'No Results': 'No operations found matching your search.',
+                'About us': 'About us',
+                'Operations': 'Operations',
+                'Our fleets': 'Our fleets',
+                'Our team': 'Our team',
+                'Careers': 'Careers',
+                'Contact us': 'Contact us',
+                'Get Quotes': 'Get quotes',
+                'Scroll Top': 'Top'
+            },
+            'es': {
+                'Operations Page Title': 'Nuestras Operaciones',
+                'Operations Page Subtitle': 'Explore nuestra gama de servicios profesionales marítimos y offshore.',
+                'Search Placeholder': 'Buscar un servicio...',
+                'Category All': 'Todos los Servicios',
+                'Category Offshore': 'Soporte Offshore',
+                'Category Logistics': 'Logística Marina',
+                'Category Charter': 'Alquiler de Buques',
+                'Category Port': 'Servicios Portuarios y Costeros',
+                'No Results': 'No se encontraron operaciones que coincidan con su búsqueda.',
+                'About us': 'Sobre nosotros',
+                'Operations': 'Operaciones',
+                'Our fleets': 'Nuestras flotas',
+                'Our team': 'Nuestro equipo',
+                'Careers': 'Carreras',
+                'Contact us': 'Contáctenos',
+                'Get Quotes': 'Obtener cotización',
+                'Scroll Top': 'Cima'
+            },
+            'fr': {
+                'Operations Page Title': 'Nos Opérations',
+                'Operations Page Subtitle': 'Explorez notre gamme de services maritimes et offshore professionnels.',
+                'Search Placeholder': 'Rechercher un service...',
+                'Category All': 'Tous les Services',
+                'Category Offshore': 'Soutien Offshore',
+                'Category Logistics': 'Logistique Maritime',
+                'Category Charter': 'Affrètement de Navires',
+                'Category Port': 'Services Portuaires et Côtiers',
+                'No Results': 'Aucune opération trouvée correspondant à votre recherche.',
+                'About us': 'À propos de nous',
+                'Operations': 'Opérations',
+                'Our fleets': 'Nos flottes',
+                'Our team': 'Notre équipe',
+                'Careers': 'Carrières',
+                'Contact us': 'Contactez-nous',
+                'Get Quotes': 'Obtenir des devis',
+                'Scroll Top': 'Haut'
+            },
+            'de': {
+                'Operations Page Title': 'Unsere Einsätze',
+                'Operations Page Subtitle': 'Entdecken Sie unser Angebot an professionellen maritimen und Offshore-Dienstleistungen.',
+                'Search Placeholder': 'Nach einem Service suchen...',
+                'Category All': 'Alle Dienstleistungen',
+                'Category Offshore': 'Offshore-Unterstützung',
+                'Category Logistics': 'Maritime Logistik',
+                'Category Charter': 'Schiffscharter',
+                'Category Port': 'Hafen- und Küstendienste',
+                'No Results': 'Keine Einsätze gefunden, die Ihrer Suche entsprechen.',
+                'About us': 'Über uns',
+                'Operations': 'Einsätze',
+                'Our fleets': 'Unsere Flotten',
+                'Our team': 'Unser Team',
+                'Careers': 'Karriere',
+                'Contact us': 'Kontaktieren Sie uns',
+                'Get Quotes': 'Angebote anfordern',
+                'Scroll Top': 'Oben'
+            },
+            'zh': {
+                'Operations Page Title': '我们的业务',
+                'Operations Page Subtitle': '探索我们的专业海事和离岸服务范围。',
+                'Search Placeholder': '搜索服务...',
+                'Category All': '所有服务',
+                'Category Offshore': '离岸支持',
+                'Category Logistics': '海运物流',
+                'Category Charter': '船舶租赁',
+                'Category Port': '港口与沿海服务',
+                'No Results': '未找到匹配您搜索的业务。',
+                'About us': '关于我们',
+                'Operations': '业务',
+                'Our fleets': '我们的船队',
+                'Our team': '我们的团队',
+                'Careers': '职业生涯',
+                'Contact us': '联系我们',
+                'Get Quotes': '获取报价',
+                'Scroll Top': '顶部'
+            }
+        };
+
+        let currentLang = localStorage.getItem('romeoAlphaLang') || 'en';
+
+        function applyTranslations(lang) {
+            const langLabel = lang === 'zh' ? 'ZH' : lang.toUpperCase();
+            if (currentLangText) currentLangText.innerText = langLabel;
+
+            const trans = translations[lang] || translations['en'];
+
+            document.querySelectorAll('[data-translate]').forEach(el => {
+                const key = el.getAttribute('data-translate');
+                if (trans[key]) {
+                    el.innerHTML = trans[key];
+                }
+            });
+
+            document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-translate-placeholder');
+                if (trans[key]) {
+                    el.placeholder = trans[key];
+                }
+            });
+        }
+
+        if (langSelector) {
+            applyTranslations(currentLang);
+            langSelector.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langSelector.classList.toggle('active');
+            });
+            document.addEventListener('click', () => langSelector.classList.remove('active'));
+            langOptions.forEach(opt => {
+                opt.addEventListener('click', () => {
+                    const l = opt.dataset.lang;
+                    localStorage.setItem('romeoAlphaLang', l);
+                    applyTranslations(l);
+                    location.reload(); // Simple reload to refresh all translated elements
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

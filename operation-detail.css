@@ -1,0 +1,385 @@
+/* Operation Detail Page Styles */
+
+.operation-detail-page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding-top: 128px;
+}
+
+.detail-section {
+    padding: 80px 0 200px;
+    /* Increased bottom spacing to 200px as requested */
+    background-color: #F9FAFB;
+    background-image: radial-gradient(rgba(107, 130, 172, 0.1) 1px, transparent 1px);
+    /* Subtle dot pattern */
+    background-size: 24px 24px;
+}
+
+.detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Upper Group: 2-Column Layout */
+.detail-upper {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-bottom: 100px;
+}
+
+.detail-text-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: #001F3F;
+    margin-bottom: 24px;
+    line-height: 1.2;
+}
+
+.detail-description {
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    color: #4B5563;
+    margin-bottom: 40px;
+}
+
+.detail-expertise h3 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #6B82AC;
+    margin-bottom: 16px;
+}
+
+.detail-expertise ul {
+    list-style: none;
+    padding: 0;
+}
+
+.detail-expertise li {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    color: #1F2937;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.detail-expertise li::before {
+    content: "✓";
+    color: #6B82AC;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Form Styles (Reused from contact.css pattern) */
+.detail-form-col .contact-form-container {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.detail-form-col h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #6B82AC;
+    margin-bottom: 24px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 16px;
+    border: 1px solid #E5E7EB;
+    border-radius: 8px;
+    background-color: #F9FAFB;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #6B82AC;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 0 3px rgba(107, 130, 172, 0.1);
+}
+
+.form-group input[readonly] {
+    background-color: #F3F4F6;
+    color: #6B7280;
+    cursor: default;
+}
+
+.btn-submit {
+    background-color: #6B82AC;
+    color: #FFFFFF;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #5A6E91;
+}
+
+.detail-lower {
+    border-top: 1px solid #E5E7EB;
+    padding-top: 60px;
+    margin-top: -40px;
+    /* Increased upward move for a tighter look with the shortened form */
+    position: relative;
+    z-index: 5;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.gallery-item {
+    height: 250px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* See More Overlay */
+.gallery-item.see-more .see-more-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 31, 63, 0.6);
+    /* Navy blue semi-transparent */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.gallery-item.see-more .see-more-overlay span {
+    color: #FFFFFF;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.gallery-item.see-more:hover .see-more-overlay {
+    background: rgba(0, 31, 63, 0.7);
+}
+
+/* End of Detail Section */
+
+/* Related Operations Section */
+.related-operations {
+    padding: 100px 0;
+    background-color: #F3FAFF;
+    /* Match --light-blue from operations.css */
+    border-top: 1px solid #E5E7EB;
+}
+
+.related-header {
+    margin-bottom: 40px;
+    padding: 0 40px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.related-subtitle {
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #6B82AC;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.related-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.related-image-container {
+    flex: 1;
+    height: 300px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+}
+
+.related-content-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.image-overlay-text {
+    position: absolute;
+    bottom: 24px;
+    left: 16px;
+    right: 16px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-align: left;
+    pointer-events: none;
+    z-index: 3;
+    transition: transform 0.6s ease-in-out;
+}
+
+.image-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.8) 100%);
+    z-index: 2;
+    transition: background 0.4s ease;
+}
+
+.overlay-button {
+    position: absolute;
+    bottom: 24px;
+    left: 16px;
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    color: #000000;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.5s ease-out;
+}
+
+/* Hover Effects */
+.related-image-container:hover .image-overlay-text {
+    transform: translateY(-46px);
+}
+
+.related-image-container:hover .overlay-button {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.2s;
+}
+
+.related-image-container:hover .related-content-image {
+    transform: scale(1.1);
+}
+
+.related-image-container:hover .image-shadow {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.9) 100%);
+}
+
+@media (max-width: 1024px) {
+    .detail-upper {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .related-grid {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .related-image-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .detail-container,
+    .related-header,
+    .related-grid {
+        padding: 0 24px;
+    }
+
+    .detail-title {
+        font-size: 36px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 200px;
+    }
+}

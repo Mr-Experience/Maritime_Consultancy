@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operation Detail - Romeo Alpha maritime consultancy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer_styles.css">
+    <link rel="stylesheet" href="operation-detail.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="operation-detail-page" id="top-anchor">
+
+        <!-- Floating Notice Header -->
+        <div class="floating-notice">
+            <div class="notice-content">
+                <span class="notice-text">Welcome to Romeo Alpha maritime consultancy & Logistics International
+                    Ltd</span>
+                <div class="close-icon-container">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 3L3 9M3 3L9 9" stroke="#6B82AC" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Site Header -->
+        <header class="main-header">
+            <div class="header-left">
+                <a href="index.html">
+                    <img src="images/logo-alpha.jpg" alt="Company Logo" class="logo">
+                </a>
+            </div>
+            <nav class="header-center desktop-nav">
+                <a href="about.html" class="nav-link">About us</a>
+                <a href="fleets.html" class="nav-link">Our fleets</a>
+                <a href="team.html" class="nav-link">Our team</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact us</a>
+            </nav>
+            <div class="header-right">
+                <div class="language-selector" id="language-selector">
+                    <div class="language-trigger">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M2 12H22" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path
+                                d="M12 2C14.5013 4.73835 15.9228 8.29203 16 12C15.9228 15.708 14.5013 19.2616 12 22C9.49872 19.2616 8.07725 15.708 8 12C8.07725 8.29203 9.49872 4.73835 12 2V2Z"
+                                stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                        <span class="language-text">EN</span>
+                    </div>
+                </div>
+                <button class="btn-get-quotes desktop-cta">Get quotes</button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <svg class="icon-hamburger" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 12H21M3 6H21M3 18H21" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+                <svg class="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                    <path d="M18 6L6 18M6 6L18 18" stroke="#000000" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+        </header>
+
+        <!-- Mobile Menu Dropdown -->
+        <div class="mobile-menu-dropdown">
+            <nav class="mobile-nav">
+                <a href="about.html" class="nav-link">About us</a>
+                <a href="fleets.html" class="nav-link">Our fleets</a>
+                <a href="team.html" class="nav-link">Our team</a>
+                <a href="careers.html" class="nav-link">Careers</a>
+                <a href="contact.html" class="nav-link">Contact us</a>
+            </nav>
+            <div class="mobile-cta">
+                <button class="btn-get-quotes">Get quotes</button>
+            </div>
+        </div>
+
+        <!-- Detail Content Section -->
+        <section class="detail-section">
+            <div class="detail-container">
+                <!-- Upper Group: Text and Form -->
+                <div class="detail-upper">
+                    <div class="detail-text-col">
+                        <h1 id="op-title" class="detail-title">Loading...</h1>
+                        <p id="op-long-desc" class="detail-description">Loading detail description...</p>
+                        <div class="detail-expertise">
+                            <h3>Our Expertise</h3>
+                            <ul>
+                                <li>Global operational reach</li>
+                                <li>Safe and reliable navigation</li>
+                                <li>Expertly maintained vessel fleet</li>
+                                <li>Highly trained maritime professionals</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="detail-form-col">
+                        <div class="contact-form-container">
+                            <h2>Inquire About This Service</h2>
+                            <form class="contact-form" action="https://formspree.io/f/xeekenna" method="POST">
+                                <input type="hidden" id="inquiry-type" name="Inquiry Type" value="">
+                                <div class="form-group">
+                                    <label for="name">Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                                </div>
+                                <!-- Removed Operation Reference field to shorten form -->
+                                <div class="form-group">
+                                    <label for="message">Your Requirements</label>
+                                    <textarea id="message" name="message" rows="4"
+                                        placeholder="How can we assist you with this operation?" required></textarea>
+                                </div>
+                                <button type="submit" class="btn-submit">Submit Inquiry</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lower Group: Image Gallery -->
+                <div class="detail-lower">
+                    <div class="gallery-grid" id="op-gallery">
+                        <!-- 4 Images populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Operations Section -->
+        <section class="related-operations">
+            <div class="operations-container">
+                <div class="related-header">
+                    <span class="related-subtitle" data-translate="Related Subtitle">explore other services</span>
+                </div>
+                <div class="related-grid" id="related-grid">
+                    <!-- 3 Overlay Cards populated by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <footer class="footer-section">
+            <div class="footer-main-group" style="border-top: none;">
+                <div class="footer-col">
+                    <h3>Subscribe to our newsletter</h3>
+                    <form class="footer-newsletter-form">
+                        <div class="input-group">
+                            <input type="email" placeholder="Email" required>
+                            <button type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- Reuse Footer content -->
+                <div class="footer-col footer-col-middle">
+                    <h3>Doing Business Together</h3>
+                    <ul class="footer-services-list">
+                        <li><a href="index.html#services">What we do</a></li>
+                        <li><a href="fleets.html">Our fleets</a></li>
+                        <li><a href="index.html#offshore">Offshore services</a></li>
+                        <li><a href="index.html#security">Marine security</a></li>
+                        <li><a href="index.html#charter">Vessel charter & management</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-col-middle">
+                    <h3>Get to know Us</h3>
+                    <ul class="footer-services-list">
+                        <li><a href="about.html">About Alpha Romeo</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact us</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright-group">
+                <span>&copy; 2026 Romeo Alpha Maritime Consultancy & Logistics International Ltd</span>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Dynamic Content Handling -->
+    <script>
+        const operationsData = [
+            {
+                id: 1,
+                title: 'Anchor Handling',
+                description: 'Specialized vessels for anchor deployment, recovery, and rig moving operations in challenging offshore environments.',
+                longDescription: 'We specialize in providing high-performance vessels equipped for complex anchor handling, towing, and supply operations. Our expertise in rig moving ensures that deep-sea installations are handled with precision and safety. With a fleet of specialized Anchor Handling Tug Supply (AHTS) vessels, we deliver reliability in the most demanding maritime environments.',
+                image: 'images/ads-gallery-1.jpg',
+                gallery: ['images/ads-gallery-1.jpg', 'images/hero-v3.jpg', 'images/bottom-3.jpg', 'images/bottom-4.jpg'],
+                tags: ['Support', 'Offshore', 'Rig Move'],
+                cta: 'Request Quote'
+            },
+            {
+                id: 2,
+                title: 'Ocean Freight',
+                description: 'Global logistics solutions for bulky and heavy maritime cargo, ensuring safe delivery across international waters.',
+                longDescription: 'Our ocean freight services combine global reach with meticulous planning to ensure your bulky or heavy cargo reaches its destination safely and on time. We manage the entire logistics chain, from port-to-port transportation to specialized handling for oversized loads. Our commitment to excellence makes us a trusted partner for international maritime logistics.',
+                image: 'images/shipping-logistics.jpg',
+                gallery: ['images/shipping-logistics.jpg', 'images/bottom-1.jpg', 'images/bottom-2.jpg', 'images/ads-gallery-2.jpg'],
+                tags: ['International', 'Cargo', 'Logistics'],
+                cta: 'Hire This Service'
+            },
+            {
+                id: 3,
+                title: 'Platform Supply Vessels',
+                description: 'Reliable charter options for platform supply vessels (PSV) to support offshore installations and drilling rigs.',
+                longDescription: 'We provide a versatile fleet of Platform Supply Vessels (PSV) designed to support offshore oil and gas platforms. Our vessels are capable of transporting a wide range of essential supplies, including fuel, water, and specialized equipment. With advanced positioning systems and experienced crews, we ensure seamless offshore logistics support.',
+                image: 'images/hero-v3.jpg',
+                gallery: ['images/hero-v3.jpg', 'images/ads-gallery-3.jpg', 'images/bottom-2.jpg', 'images/bottom-3.jpg'],
+                tags: ['Charter', 'Supply', 'PSV'],
+                cta: 'Check Availability'
+            },
+            {
+                id: 4,
+                title: 'Marine Security Escort',
+                description: 'Specialized protection and escort services for high-value maritime assets and cargo transportation.',
+                longDescription: 'We offer comprehensive marine security escort services to protect your high-value assets during transit. Our team of experienced security professionals operates a fleet of fast interceptor craft and armored support vessels, providing a robust deterrent and rapid response capability in high-risk maritime zones.',
+                image: 'images/bottom-3.jpg',
+                gallery: ['images/bottom-3.jpg', 'images/hero-v3.jpg', 'images/ads-gallery-4.jpg', 'images/bottom-2.jpg'],
+                tags: ['Security', 'Protection', 'Escort'],
+                cta: 'Secure Asset'
+            }
+        ];
+
+        function loadOperationDetail() {
+            const params = new URLSearchParams(window.location.search);
+            const id = parseInt(params.get('id'));
+            const op = operationsData.find(item => item.id === id) || operationsData[0];
+
+            document.getElementById('op-title').innerText = op.title;
+            document.getElementById('op-long-desc').innerText = op.longDescription;
+            document.getElementById('inquiry-type').value = op.title;
+
+            // Update Gallery
+            const galleryContainer = document.getElementById('op-gallery');
+            const remainingCount = op.gallery.length - 4;
+            galleryContainer.innerHTML = op.gallery.slice(0, 4).map((img, index) => `
+                <div class="gallery-item ${index === 3 ? 'see-more' : ''}">
+                    <img src="${img}" alt="${op.title} Gallery ${index + 1}">
+                    ${index === 3 && remainingCount > 0 ? `<div class="see-more-overlay"><span>${remainingCount} images left</span></div>` : ''}
+                </div>
+            `).join('');
+
+            // Update Related Section
+            const relatedGrid = document.getElementById('related-grid');
+            const relatedOps = operationsData.filter(item => item.id !== op.id).slice(0, 3);
+
+            relatedGrid.innerHTML = relatedOps.map(item => `
+                <div class="related-image-container">
+                    <img src="${item.image}" alt="${item.title}" class="related-content-image">
+                    <div class="image-shadow"></div>
+                    <div class="image-overlay-text">${item.title}</div>
+                    <a href="operation-detail.html?id=${item.id}" class="overlay-button-link">
+                        <button class="overlay-button">Explore Service</button>
+                    </a>
+                </div>
+            `).join('');
+        }
+
+        window.addEventListener('DOMContentLoaded', loadOperationDetail);
+
+        // Header and Mobile Menu Logic
+        const noticeHeader = document.querySelector('.floating-notice');
+        const noticeCloseBtn = document.querySelector('.floating-notice .close-icon-container');
+        const mainHeader = document.querySelector('.main-header');
+        const opDetailPage = document.querySelector('.operation-detail-page');
+        const mobileMenu = document.querySelector('.mobile-menu-dropdown');
+
+        if (noticeCloseBtn) {
+            noticeCloseBtn.addEventListener('click', () => {
+                noticeHeader.style.display = 'none';
+                mainHeader.style.top = '0';
+                opDetailPage.style.paddingTop = '80px';
+                if (mobileMenu) mobileMenu.style.top = '80px';
+            });
+        }
+
+        const toggleBtn = document.querySelector('.mobile-menu-toggle');
+        const hamburgerIcon = document.querySelector('.icon-hamburger');
+        const closeIcon = document.querySelector('.icon-close');
+
+        if (toggleBtn) {
+            toggleBtn.addEventListener('click', () => {
+                const isOpen = mobileMenu.classList.toggle('open');
+                if (isOpen) {
+                    hamburgerIcon.style.display = 'none';
+                    closeIcon.style.display = 'block';
+                } else {
+                    hamburgerIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>

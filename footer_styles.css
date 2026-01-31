@@ -311,5 +311,31 @@
         text-align: center;
         display: block;
         line-height: 1.5;
+        font-size: 11px;
+    }
+}
+
+/* Mobile Spacing Optimization (< 500px) */
+@media (max-width: 500px) {
+    .footer-section {
+        padding: 48px 16px !important;
+    }
+
+    .footer-main-group,
+    .footer-col,
+    .footer-services-list {
+        gap: 16px !important;
+    }
+
+    .footer-col h3 {
+        margin-bottom: 16px !important;
+    }
+
+    .footer-services-list li {
+        margin-bottom: 16px !important;
+    }
+
+    .footer-services-list li:last-child {
+        margin-bottom: 0 !important;
     }
 }

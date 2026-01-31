@@ -23,8 +23,8 @@
     align-items: center;
     text-align: center;
     /* Reuse maritime hero or specific one if needed, using generic maritime for now */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-image.jpg');
-    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-v3.jpg');
+    background-size: 107%;
     background-position: center;
 }
 
@@ -77,36 +77,12 @@
 
 /* Section 2: Recruitment (Image Right) */
 /* Section 2: Recruitment (Image Right) */
-.recruitment-section .career-container {
-    /* flex-direction: row; // Default is row, so just removing reverse is enough */
-}
-
 .recruitment-section {
-    padding-bottom: 216px;
-    /* 96px + 120px for shape */
+    padding-bottom: 96px;
     position: relative;
 }
 
-/* Shape Divider */
-.custom-shape-divider-bottom {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
 
-.custom-shape-divider-bottom svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 100px;
-}
-
-.custom-shape-divider-bottom .shape-fill {
-    fill: #FFFFFF;
-}
 
 /* Columns */
 .career-col-image {
@@ -237,5 +213,27 @@
 
     .custom-shape-divider-bottom svg {
         height: 50px;
+    }
+}
+
+/* Mobile Spacing Optimization (< 500px) */
+@media (max-width: 500px) {
+    .career-section {
+        padding: 48px 16px !important;
+    }
+
+    .career-container {
+        gap: 16px !important;
+    }
+
+    .career-col-text span,
+    .career-col-text h2,
+    .career-col-text .body-text,
+    .body-text p {
+        margin-bottom: 16px !important;
+    }
+
+    .body-text p:last-child {
+        margin-bottom: 0 !important;
     }
 }
