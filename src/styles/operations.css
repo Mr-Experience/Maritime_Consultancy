@@ -25,8 +25,8 @@
 .operations-hero {
     height: 300px;
     padding: 0;
-    background-color: var(--white);
-    color: var(--navy-blue);
+    background-color: var(--navy-blue);
+    color: var(--white);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -38,14 +38,15 @@
     font-size: 56px;
     font-weight: 800;
     margin-bottom: 24px;
+    color: var(--white);
 }
 
 .operations-subtitle {
     font-family: 'Manrope', sans-serif;
     font-size: 18px;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.9);
     max-width: 600px;
-    margin: 0 auto 56px;
+    margin: 0 auto;
 }
 
 .search-box-container {
