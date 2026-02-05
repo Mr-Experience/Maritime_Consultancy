@@ -107,64 +107,64 @@ const Marketplace = () => {
                         borderRadius: '16px',
                         marginBottom: '48px',
                         display: 'flex',
-                        justify- content: 'space-between',
-                    alignItems: 'center',
-                    border: '1px solid #E5E7EB',
-                    textAlign: 'left'
-                }}>
-                    <div style={{ maxWidth: '600px' }}>
-                        <h2 style={{ fontSize: '24px', color: '#001F3F', marginBottom: '8px' }}>Specialized Offshore & Marine Services</h2>
-                        <p style={{ color: '#4B5563', fontSize: '15px' }}>
-                            We provide expert servicing for <strong>Oil Rig Platforms</strong>, along with professional building and maintenance of <strong>House Boats</strong> and specialized marine vessels.
-                        </p>
+                        justifyContent: 'space-between',
+                        alignItems: 'center',
+                        border: '1px solid #E5E7EB',
+                        textAlign: 'left'
+                    }}>
+                        <div style={{ maxWidth: '600px' }}>
+                            <h2 style={{ fontSize: '24px', color: '#001F3F', marginBottom: '8px' }}>Specialized Offshore & Marine Services</h2>
+                            <p style={{ color: '#4B5563', fontSize: '15px' }}>
+                                We provide expert servicing for <strong>Oil Rig Platforms</strong>, along with professional building and maintenance of <strong>House Boats</strong> and specialized marine vessels.
+                            </p>
+                        </div>
+                        <Link to="/contact">
+                            <button className="op-card-cta" style={{ width: 'auto', padding: '14px 32px' }}>Reach out to us</button>
+                        </Link>
                     </div>
-                    <Link to="/contact">
-                        <button className="op-card-cta" style={{ width: 'auto', padding: '14px 32px' }}>Reach out to us</button>
-                    </Link>
                 </div>
-        </div>
 
-            {/* Operations Grid */ }
-    <section className="operations-grid-section">
-        <div className="operations-container">
-            <div className="operations-grid">
-                {filteredOps.map(op => (
-                    <div key={op.id} className="operation-card">
-                        <div className="op-card-image">
-                            <img src={op.image} alt={op.title} />
+                {/* Operations Grid */}
+                <section className="operations-grid-section">
+                    <div className="operations-container">
+                        <div className="operations-grid">
+                            {filteredOps.map(op => (
+                                <div key={op.id} className="operation-card">
+                                    <div className="op-card-image">
+                                        <img src={op.image} alt={op.title} />
+                                    </div>
+                                    <div className="op-card-content">
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
+                                            <h3 className="op-card-title" style={{ margin: 0 }}>{op.title}</h3>
+                                            {op.price && <span style={{ fontWeight: '700', color: '#0056b3', fontSize: '18px' }}>{op.price}</span>}
+                                        </div>
+                                        <p className="op-card-desc">{op.description}</p>
+                                        <div className="op-card-tags">
+                                            {op.tags.map((tag, index) => (
+                                                <span key={index} className="op-tag">{tag}</span>
+                                            ))}
+                                        </div>
+                                        <div style={{ display: 'flex', gap: '10px', marginTop: 'auto' }}>
+                                            <Link to={`/marketplace/${op.id}`} className="op-card-cta-link" style={{ textDecoration: 'none', flex: 1 }}>
+                                                <button className="op-card-cta" style={{ backgroundColor: '#F3FAFF', color: '#0056b3', border: '1px solid #0056b3' }}>
+                                                    {t('See Details') || 'See Details'}
+                                                </button>
+                                            </Link>
+                                            <Link to={`/contact`} className="op-card-cta-link" style={{ textDecoration: 'none', flex: 1 }}>
+                                                <button className="op-card-cta">{t('Interested CTA')}</button>
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                        <div className="op-card-content">
-                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: '8px' }}>
-                                <h3 className="op-card-title" style={{ margin: 0 }}>{op.title}</h3>
-                                {op.price && <span style={{ fontWeight: '700', color: '#0056b3', fontSize: '18px' }}>{op.price}</span>}
+                        {filteredOps.length === 0 && (
+                            <div className="no-results">
+                                <p>{t('No Results')}</p>
                             </div>
-                            <p className="op-card-desc">{op.description}</p>
-                            <div className="op-card-tags">
-                                {op.tags.map((tag, index) => (
-                                    <span key={index} className="op-tag">{tag}</span>
-                                ))}
-                            </div>
-                            <div style={{ display: 'flex', gap: '10px', marginTop: 'auto' }}>
-                                <Link to={`/marketplace/${op.id}`} className="op-card-cta-link" style={{ textDecoration: 'none', flex: 1 }}>
-                                    <button className="op-card-cta" style={{ backgroundColor: '#F3FAFF', color: '#0056b3', border: '1px solid #0056b3' }}>
-                                        {t('See Details') || 'See Details'}
-                                    </button>
-                                </Link>
-                                <Link to={`/contact`} className="op-card-cta-link" style={{ textDecoration: 'none', flex: 1 }}>
-                                    <button className="op-card-cta">{t('Interested CTA')}</button>
-                                </Link>
-                            </div>
-                        </div>
+                        )}
                     </div>
-                ))}
-            </div>
-            {filteredOps.length === 0 && (
-                <div className="no-results">
-                    <p>{t('No Results')}</p>
-                </div>
-            )}
-        </div>
-    </section>
+                </section>
         </div >
     );
 };
