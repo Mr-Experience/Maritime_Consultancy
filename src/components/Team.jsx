@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from '../context/TranslationContext';
 import { fetchTeam } from '../services/team';
 import '../styles/team.css';

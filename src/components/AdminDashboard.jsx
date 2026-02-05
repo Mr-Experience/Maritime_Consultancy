@@ -6,7 +6,8 @@ import { fetchMarketplaceItems, addMarketplaceItem, deleteMarketplaceItem, updat
 import { getFaqs, addFaq, updateFaq, deleteFaq } from '../services/faq';
 import { fetchProposals, deleteProposal } from '../services/proposals';
 import { fetchNewsletterSubscriptions, deleteNewsletterSubscription } from '../services/newsletter';
-import { fetchAds, addAd, deleteAd, uploadImage as uploadAdImage } from '../services/ads';
+import { fetchAds, addAd, deleteAd } from '../services/ads';
+import { fetchTeam, addTeamMember, deleteTeamMember, updateTeamMember } from '../services/team';
 import { fetchSiteInfo, updateSiteInfo, addSiteInfo, deleteSiteInfo } from '../services/siteInfo';
 import { Element3, Sms, Logout, HambergerMenu, CloseSquare, Ship, Add, Trash, Edit, MessageQuestion, Briefcase, Gallery, People, InfoCircle, SearchNormal1 } from 'iconsax-react';
 
